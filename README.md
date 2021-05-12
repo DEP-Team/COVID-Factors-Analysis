@@ -38,3 +38,25 @@ Maintain metadata about each datasets:
 * URL to dataset
 * URL to documentation
 * Detailed procedures for ingestion and transformation
+
+## Notes
+Requirements:
+* Install Python, Pip and Poetry
+* Create Google service account with permission to GCS and generate JSON file
+* Install Gcloud (Mac: https://stackoverflow.com/questions/46144267/bash-gcloud-command-not-found-on-mac)
+
+### Creating a Cloud Function
+Walkthrough: https://cloud.google.com/blog/products/application-development/how-to-schedule-a-recurring-python-script-on-gcp
+1. Create Python file and function
+2. Deploy function: 
+   ```
+   gcloud functions deploy ingest-feed --entry-point main --runtime python37 --trigger-resource ingest-feed --trigger-event google.pubsub.topic.publish --timeout 540s
+   ```
+3. Create schedule. NOTE: JOB should have its own name, and MESSAGE BODY should be the location of module and function.
+   ```
+   gcloud scheduler jobs create pubsub [TOPIC NAME] --schedule "* * * * *" --topic ingest-feed --message-body "[PACKAGE].[MODULE]:[FUNCTION]"
+   ```
+   Example:
+   ```
+   gcloud scheduler jobs create pubsub ingest-feed-covid-cases --schedule "* * * * *" --topic ingest-feed --message-body "covid.covid_cases:ingest"
+   ```
