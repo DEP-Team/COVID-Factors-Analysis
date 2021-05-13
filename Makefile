@@ -1,5 +1,8 @@
-PROJECT = depa-spring2020
-BUCKET = msca-31012-dep-demo-1
+include .env
+
+sched ?= "0 0 * * *"
+message ?= "{}"
+limit ?= 50
 
 install:
 	pip install virtualenv
@@ -21,13 +24,13 @@ deploy:
 
 schedule:
 	gcloud scheduler jobs create pubsub ingest_feeds_$(name)_job\
-		--schedule "0 0 * * *"\
+		--schedule $(schedule)\
 		--topic ingest_feeds_$(name)\
-		--message-body "{}"
+		--message-body $(message)
 
 trigger:
 	gcloud pubsub topics publish ingest_feeds_$(name)\
-		--message "{}"
+		--message "$(message)";
 
 log:
-	gcloud functions logs read --limit 50
+	gcloud functions logs read --limit $(limit)
