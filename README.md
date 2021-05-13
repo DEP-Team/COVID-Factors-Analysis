@@ -1,28 +1,36 @@
 # COVID Factors Datasets
-This repository will function as a catalog of datasets for COVID Factors.
+This repository is a catalog of datasets for COVID-19 Factors and ingestion scripts.
 
-## Dataset layout
+## Project layout
 
 * Project is divided into subject areas.
-* Each subject area should have a `README.md` describing the dataset, how to ingest and what transformations should take place.
-* Sample datasets are stored in a subject area folder.
+* Subject areas have a `README.md` describing the subject, sources, datasets.
+* Python scripts responsible for ingesting datasets.
+* Sample datasets are stored in Google Cloud Storage bucket.
 
 ```
 |- README.md
 |- census/
-|  |- README.md
-|  `- sample.csv 
+|  |- us_counties.py
+|  `- README.md
 |- covid/
-   |- README.md
-   |- covid_cases.csv
-   |- covid_testing.csv
-   `- covid_hospitalization.csv
+|  |- jhu_county_summary.py
+|  `- README.md
 |- social-gathering/
+|  | acled_events.py
+|  `- README.md
 `- vaccinations/ 
 ```
 
-## Dataset metadata
-Maintain metadata about each datasets:
+### Describing sources
+
+* Name of source
+* Type of organization
+* Methodology  
+* Link to organization
+
+### Describing datasets
+
 * Name of dataset
 * Summary description
 * Subject area (e.g., census, covid, hospitalization, vaccines)
@@ -39,24 +47,73 @@ Maintain metadata about each datasets:
 * URL to documentation
 * Detailed procedures for ingestion and transformation
 
-## Notes
-Requirements:
-* Install Python, Pip and Poetry
-* Create Google service account with permission to GCS and generate JSON file
-* Install Gcloud (Mac: https://stackoverflow.com/questions/46144267/bash-gcloud-command-not-found-on-mac)
+## Development
 
-### Creating a Cloud Function
-Walkthrough: https://cloud.google.com/blog/products/application-development/how-to-schedule-a-recurring-python-script-on-gcp
-1. Create Python file and function
-2. Deploy function: 
-   ```
-   gcloud functions deploy ingest-feed --entry-point main --runtime python37 --trigger-resource ingest-feed --trigger-event google.pubsub.topic.publish --timeout 540s
-   ```
-3. Create schedule. NOTE: JOB should have its own name, and MESSAGE BODY should be the location of module and function.
-   ```
-   gcloud scheduler jobs create pubsub [TOPIC NAME] --schedule "* * * * *" --topic ingest-feed --message-body "[PACKAGE].[MODULE]:[FUNCTION]"
-   ```
-   Example:
-   ```
-   gcloud scheduler jobs create pubsub ingest-feed-covid-cases --schedule "* * * * *" --topic ingest-feed --message-body "covid.covid_cases:ingest"
-   ```
+Requirements:
+* Python 3.7+ and Pip installed
+* Python library: virtualenv
+  ```sh
+  pip install virtualenv
+  ```
+* [Github SSH key configured](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+* Gcloud SDK CLI (Mac instructions: https://stackoverflow.com/questions/46144267/bash-gcloud-command-not-found-on-mac) 
+  ```sh
+  gcloud init
+  ```
+* Google service account with permission to GCS
+* Gcloud authorization token ([Background](https://codeburst.io/google-cloud-authentication-by-example-1481b02292e4))
+  ```sh
+  gcloud init
+  gcloud auth login
+  ```
+
+### Installing
+
+* Clone project:
+  ```sh
+  git clone git@github.com:DEP-Team/COVID-Factors-Datasets.git
+  cd COVID-Factors-Datasets
+  ```
+* Create virtual environment:
+  ```sh
+  virtualenv venv
+  venv/bin/activate
+  ```
+* Install library dependencies:
+  ```sh
+  pip install -r requirements.txt 
+  ```
+
+### Running
+
+Locally you can run function by invoking `main.py`, which has a `cli` method ready to accept an argument similar to how the script is invoked by PubSub. The path to the program is passed as an argument: `package_name.module_name:function_name`. For example, `covid.covid_cases:ingest`.
+
+```sh
+python main.py covid.covid_cases:ingest 
+```
+
+### Deploying
+
+Deploying Cloud Function:
+
+```sh
+gcloud functions deploy ingest-feed --entry-point pubsub --runtime python37 --trigger-resource ingest-feed --trigger-event google.pubsub.topic.publish --timeout 540s
+```
+
+Scheduling: 
+```sh
+gcloud scheduler jobs create pubsub [TOPIC NAME] --schedule "* * * * *" --topic ingest-feed --message-body "[PACKAGE].[MODULE]:[FUNCTION]"
+```
+
+Only need to schedule job once. Only run if creating and updating job schedule. Schedule format is in [crontab format](https://crontab.guru/).
+
+Scheduling Example: running `covid.covid_cases:ingest` once daily.
+```sh
+gcloud scheduler jobs create pubsub ingest-feed-covid-cases --schedule "0 0 * * *" --topic ingest-feed --message-body "covid.covid_cases:ingest"
+```
+
+Note:  --message-body uses the same "package.module:function" just how `python main.py` is called.
+
+## References
+
+* [How to schedule a recurring Python script on GCP](https://cloud.google.com/blog/products/application-development/how-to-schedule-a-recurring-python-script-on-gcp)

@@ -1,19 +1,15 @@
 import logging
-import os
 from datetime import datetime
 
-import gcsfs
 import requests
-from dotenv import load_dotenv
-
-load_dotenv()
-
-PROJECT = os.getenv("PROJECT")
-BUCKET = os.getenv("BUCKET")
-TOKEN = os.getenv("TOKEN")
+from gcsfs import GCSFileSystem
 
 
-def ingest(fs, current_time):
+def ingest(
+        fs: GCSFileSystem,
+        current_time: datetime = None,
+        bucket: str = None
+):
     """Downloads US county COVID-19 case data from CSSE Github"""
     url = "https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/"\
           "csse_covid_19_time_series/time_series_covid19_confirmed_US.csv?raw=true"
@@ -21,7 +17,7 @@ def ingest(fs, current_time):
     resp = requests.get(url)
     resp.raise_for_status()
 
-    save_path = f"{BUCKET}/covid/covid_cases.csv"
+    save_path = f"{bucket}/covid/covid_cases.csv"
     with fs.open(save_path, "wb") as fp:
         fp.write(resp.content)
 
@@ -32,8 +28,19 @@ def ingest(fs, current_time):
 
 
 if __name__ == "__main__":
+    import os
+    from dotenv import load_dotenv
+    from gcsfs import GCSFileSystem
+
+    load_dotenv()
+
+    PROJECT = os.getenv("PROJECT")
+    BUCKET = os.getenv("BUCKET")
+    TOKEN = os.getenv("TOKEN")
+
     logging.basicConfig(
         level=logging.INFO,
         handlers=[logging.StreamHandler()])
 
-    trigger("data", "context")
+    fs = GCSFileSystem(project=PROJECT, token=TOKEN)
+    ingest(fs, bucket=BUCKET)

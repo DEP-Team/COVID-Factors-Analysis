@@ -3,7 +3,9 @@ import logging
 import os
 import importlib
 from datetime import datetime
+from typing import Any
 
+import click
 import gcsfs
 from dotenv import load_dotenv
 
@@ -14,7 +16,7 @@ BUCKET = os.getenv("BUCKET")
 TOKEN = os.getenv("TOKEN")
 
 
-def main(data, event):
+def pubsub(data: Any, event: Any):
     """Triggered from a message on a Cloud Pub/Sub topic.
     Calls an ingestion function based on message.
 
@@ -33,7 +35,7 @@ def main(data, event):
             logging.info(f"Calling method: {target_module}.{target_method}")
             ingest_module = importlib.import_module(target_module)
             ingest_func = getattr(ingest_module, target_method)
-            ingest_func(fs, current_time)
+            ingest_func(fs, current_time, bucket=BUCKET)
         except Exception as error:
             logging.error(f"Query failed due to {error}")
             raise
@@ -42,9 +44,15 @@ def main(data, event):
         raise
 
 
+@click.command()
+@click.argument("prog")
+def cli(prog: str):
+    pubsub({"data": base64.b64encode(prog.encode("ascii")).decode("ascii")}, {})
+
+
 if __name__ == "__main__":
     logging.basicConfig(
         level=logging.INFO,
         handlers=[logging.StreamHandler()])
 
-    main("data", "context")
+    cli()
