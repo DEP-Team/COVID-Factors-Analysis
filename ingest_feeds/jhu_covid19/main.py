@@ -1,5 +1,7 @@
+import json
 import logging
 import os
+from base64 import b64decode, b64encode
 from datetime import datetime
 
 import pandas as pd
@@ -38,6 +40,10 @@ def main(event, context):
     current_time = datetime.utcnow()
     logging.info(f"Cloud Function was triggered on {current_time}")
 
+    # message
+    message_decoded = b64decode(event["data"].encode("ascii")).decode("ascii")
+    message = json.loads(message_decoded)
+
     logging.info(f"Downloading confirmed: {confirmed_source_url}")
     confirmed_df = pd.read_csv(confirmed_source_url)
 
@@ -56,4 +62,6 @@ def main(event, context):
 
 
 if __name__ == "__main__":
-    main({}, {})
+    message = json.dumps({})
+    data = {"data": b64encode(message.encode("ascii")).decode("ascii")}
+    main(data, {})

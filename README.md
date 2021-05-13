@@ -3,22 +3,18 @@ This repository is a catalog of datasets for COVID-19 Factors and ingestion scri
 
 ## Project layout
 
-* Project is divided into subject areas.
-* Subject areas have a `README.md` describing the subject, sources, datasets.
-* Python scripts responsible for ingesting datasets.
-* Sample datasets are stored in Google Cloud Storage bucket.
+* Project is divided into tasks and data sources.
+* Folders should have a `README.md` describing the tasks, sources, datasets.
+* Python scripts for ingesting datasets.
+* Sample datasets stored in Google Cloud Storage bucket.
 
 ```
 |- README.md
 |- census/
-|  |- us_counties.py
+|  |- main.py
 |  `- README.md
-|- covid/
-|  |- jhu_county_summary.py
-|  `- README.md
+|- jhu_covid19/
 |- social-gathering/
-|  | acled_events.py
-|  `- README.md
 |- vaccinations/ 
 |- gcloud-token.json
 |- main.py
@@ -96,30 +92,41 @@ Requirements:
 
 ### Running
 
-Locally you can run function by invoking `main.py`, which has a `cli` method ready to accept an argument similar to how the script is invoked by PubSub. The path to the program is passed as an argument: `package_name.module_name:function_name`. For example, `covid.covid_cases:ingest`.
-
 ```sh
-python main.py covid.covid_cases:ingest 
+python ingest_feeds/jhu_covid19/main.py
 ```
 
 ### Deploying
 
-Deploying Cloud Function:
-
 ```sh
-gcloud functions deploy ingest-feed --entry-point pubsub --runtime python37 --trigger-resource ingest-feed --trigger-event google.pubsub.topic.publish --timeout 540s
+gcloud functions deploy ingest_feeds_$(name)\
+    --entry-point main\
+    --source ingest_feeds/$(name)\
+    --runtime python37\
+    --trigger-resource ingest_feeds_$(name)\
+    --trigger-event google.pubsub.topic.publish\
+    --timeout 540s\
+    --set-env-vars PROJECT=${PROJECT}\
+    --set-env-vars BUCKET=${BUCKET}\
+    --set-env-vars TOKEN=cloud
 ```
 
-Scheduling: 
+### Scheduling
+
+Run when creating or updating job schedule. Schedule format is in [crontab format](https://crontab.guru/). 
 ```sh
-gcloud scheduler jobs create pubsub [TOPIC NAME] --schedule "* * * * *" --topic ingest-feed --message-body "[PACKAGE].[MODULE]:[FUNCTION]"
+gcloud scheduler jobs create pubsub ingest_feeds_$(name)_job\
+    --schedule "0 0 * * *"\
+    --topic ingest_feeds_$(name)\
+    --message-body "{}"
 ```
 
-Only need to schedule job once. Only run if creating and updating job schedule. Schedule format is in [crontab format](https://crontab.guru/).
-
-Scheduling Example: running `covid.covid_cases:ingest` once daily.
+Example: ingesting JHU COVID-19 dataset daily.
 ```sh
-gcloud scheduler jobs create pubsub ingest-feed-covid-cases --schedule "0 0 * * *" --topic ingest-feed --message-body "covid.covid_cases:ingest"
+gcloud scheduler jobs create pubsub ingest_feeds_$(name)_job\
+    --schedule "0 0 * * *"\
+    --topic ingest_feeds_$(name)\
+    --message-body "{}"
 ```
 
 Note:  --message-body uses the same "package.module:function" just how `python main.py` is called.
