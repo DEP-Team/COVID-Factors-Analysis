@@ -19,8 +19,18 @@ This repository is a catalog of datasets for COVID-19 Factors and ingestion scri
 |- social-gathering/
 |  | acled_events.py
 |  `- README.md
-`- vaccinations/ 
+|- vaccinations/ 
+|- gcloud-token.json
+|- main.py
+|- Makefile
+`- requirements.txt
 ```
+
+Note:
+* `.env` are environment variables for project and bucket name and path to token. Set `TOKEN=cloud` to allow SDK to work its magic and when deploying to cloud.
+* `gcloud-token.json` is the JSON private key for the `ingest-app` service account, but you can fill in with your own. Do NOT commit to git repo.
+* `main.py` is the entry-point for Cloud Functions and CLI.
+* `reuirements.txt` are the library dependencies to run any ingestion script.
 
 ### Describing sources
 
