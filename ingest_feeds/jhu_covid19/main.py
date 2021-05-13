@@ -42,7 +42,7 @@ def main(event, context):
 
     # message
     message_decoded = b64decode(event["data"].encode("ascii")).decode("ascii")
-    message = json.loads(message_decoded)
+    message = json.loads(message_decoded) if message_decoded else {}
 
     logging.info(f"Downloading confirmed: {confirmed_source_url}")
     confirmed_df = pd.read_csv(confirmed_source_url)

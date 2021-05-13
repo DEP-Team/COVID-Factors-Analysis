@@ -4,29 +4,27 @@ This repository is a catalog of datasets for COVID-19 Factors and ingestion scri
 ## Project layout
 
 * Project is divided into tasks and data sources.
+* Folders are containers for [Cloud Functions with PubSub trigger](https://cloud.google.com/functions/docs/calling/pubsub) and contain a Python script and requirements file.
 * Folders should have a `README.md` describing the tasks, sources, datasets.
-* Python scripts for ingesting datasets.
 * Sample datasets stored in Google Cloud Storage bucket.
 
 ```
 |- README.md
-|- census/
-|  |- main.py
-|  `- README.md
 |- jhu_covid19/
+|  |- main.py
+|  |- requirements.txt
+|  `- README.md
 |- social-gathering/
 |- vaccinations/ 
 |- gcloud-token.json
-|- main.py
 |- Makefile
-`- requirements.txt
 ```
 
 Note:
-* `.env` are environment variables for project and bucket name and path to token. Set `TOKEN=cloud` to allow SDK to work its magic and when deploying to cloud.
-* `gcloud-token.json` is the JSON private key for the `ingest-app` service account, but you can fill in with your own. Do NOT commit to git repo.
-* `main.py` is the entry-point for Cloud Functions and CLI.
-* `reuirements.txt` are the library dependencies to run any ingestion script.
+* `.env` are environment variables for project and bucket name and path to token.
+* `gcloud-token.json` is the JSON private key for the `ingest-app` service account, but you can fill in with your own.
+* `Makefile` contains recipes to deploy and schedule Cloud Functions
+* Cloud Function expects a Python file named `main.py` with a function named `main()`.
 
 ### Describing sources
 
@@ -85,10 +83,6 @@ Requirements:
   virtualenv venv
   venv/bin/activate
   ```
-* Install library dependencies:
-  ```sh
-  pip install -r requirements.txt 
-  ```
 
 ### Running
 
@@ -128,8 +122,6 @@ gcloud scheduler jobs create pubsub ingest_feeds_$(name)_job\
     --topic ingest_feeds_$(name)\
     --message-body "{}"
 ```
-
-Note:  --message-body uses the same "package.module:function" just how `python main.py` is called.
 
 ## References
 

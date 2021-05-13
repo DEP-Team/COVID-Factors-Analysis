@@ -8,7 +8,6 @@ install:
 	pip install virtualenv
 	virtualenv venv
 	source venv/bin/activate
-	pip install -r requirements.txt
 
 deploy:
 	gcloud functions deploy ingest_feeds_$(name)\
