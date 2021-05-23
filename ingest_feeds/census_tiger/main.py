@@ -91,7 +91,7 @@ def load_states(engine):
         states.to_sql("state", con=conn, if_exists="append", index=False)
 
     # create CSV for posterity
-    states.to_csv("data/import/state.csv")
+    states.to_csv("data/import/state.csv", index=False)
 
 
 def load_counties(engine):
@@ -124,7 +124,7 @@ def load_counties(engine):
     with engine.begin() as conn:
         counties.to_sql("county", con=conn, if_exists="append", index=False)
 
-    counties.to_csv("data/import/county.csv")
+    counties.to_csv("data/import/county.csv", index=False)
 
 
 def load_csas(engine):
@@ -171,8 +171,8 @@ def load_csas(engine):
         csa_df.to_sql("csa", con=conn, if_exists="append", index=False)
         county_csa_df.to_sql("county_csa", con=conn, if_exists="append", index=False)
 
-    csa_df.to_csv("data/import/csa.csv")
-    county_csa_df.to_csv("data/import/county_csa.csv")
+    csa_df.to_csv("data/import/csa.csv", index=False)
+    county_csa_df.to_csv("data/import/county_csa.csv", index=False)
 
 
 def main(event, context):
