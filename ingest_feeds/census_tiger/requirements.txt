@@ -1,0 +1,6 @@
+geopandas
+mysql-connector-python
+pandas
+python-dotenv
+requests
+sqlalchemy

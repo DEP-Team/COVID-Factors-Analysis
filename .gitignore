@@ -15,4 +15,6 @@ venv
 .idea/
 .vscode/
 
+data/raw/*
+
 gcloud-token.json
