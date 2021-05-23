@@ -90,6 +90,9 @@ def load_states(engine):
     with engine.begin() as conn:
         states.to_sql("state", con=conn, if_exists="append", index=False)
 
+    # create CSV for posterity
+    states.to_csv("data/import/state.csv")
+
 
 def load_counties(engine):
     counties = (
@@ -120,6 +123,8 @@ def load_counties(engine):
 
     with engine.begin() as conn:
         counties.to_sql("county", con=conn, if_exists="append", index=False)
+
+    counties.to_csv("data/import/county.csv")
 
 
 def load_csas(engine):
@@ -166,6 +171,9 @@ def load_csas(engine):
         csa_df.to_sql("csa", con=conn, if_exists="append", index=False)
         county_csa_df.to_sql("county_csa", con=conn, if_exists="append", index=False)
 
+    csa_df.to_csv("data/import/csa.csv")
+    county_csa_df.to_csv("data/import/county_csa.csv")
+
 
 def main(event, context):
     """Downloads Census Tiger Files and loads into MySQL tables.
@@ -179,8 +187,8 @@ def main(event, context):
     logging.info(f"Cloud Function was triggered on {current_time}")
 
     # message
-    message_decoded = b64decode(event["data"].encode("ascii")).decode("ascii")
-    message = json.loads(message_decoded) if message_decoded else {}
+    #message_decoded = b64decode(event["data"].encode("ascii")).decode("ascii")
+    #message = json.loads(message_decoded) if message_decoded else {}
 
     engine = create_engine("mysql+mysqlconnector://root:password@localhost/covid")
     load_states(engine)
