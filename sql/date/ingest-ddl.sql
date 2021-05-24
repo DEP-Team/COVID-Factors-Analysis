@@ -7,6 +7,7 @@ Adapted from PostgreSQL query: https://duffn.medium.com/creating-a-date-dimensio
 
 */
 
+CREATE DATABASE IF NOT EXISTS `covid`;
 USE covid;
 
 CREATE TABLE IF NOT EXISTS `numbers_small` (
@@ -46,6 +47,8 @@ CREATE TABLE IF NOT EXISTS `date` (
     PRIMARY KEY (`date_id`),
 	UNIQUE KEY `date` (`date`),
 	KEY `date_year_week` (`year`,`week_of_year`)
+	INDEX `date_date_id_idx` (`date_id`),
+	INDEX `date_date_idx` (`date`)
 );
 
 /**

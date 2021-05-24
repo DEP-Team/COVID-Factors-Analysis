@@ -1,3 +1,15 @@
+"""
+Tableau applied some engineering on the JHU datasets and released on data.world:
+https://data.world/covid-19-data-resource-hub/covid-19-case-counts/workspace/file?filename=COVID-19+Activity.csv
+* Note: This is a 145 MB file.
+
+
+Otherwise, the original data sources are hostedo n JHU CSSE Github:
+confirmed_source_url = "https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/" \
+                       "csse_covid_19_time_series/time_series_covid19_confirmed_US.csv?raw=true"
+deaths_source_url = "https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/" \
+                    "csse_covid_19_time_series/time_series_covid19_deaths_US.csv?raw=true"
+"""
 import json
 import logging
 import os
@@ -6,27 +18,12 @@ from datetime import datetime
 
 import pandas as pd
 from dotenv import load_dotenv
+from sqlalchemy import create_engine
 
 load_dotenv()
-bucket = os.getenv("BUCKET")
-
-# CSVs are hosted on JHU CSSE Github
-confirmed_source_url = "https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/" \
-                       "csse_covid_19_time_series/time_series_covid19_confirmed_US.csv?raw=true"
-deaths_source_url = "https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/" \
-                    "csse_covid_19_time_series/time_series_covid19_deaths_US.csv?raw=true"
-
-# CSVs written to GCS
-# note: pandas can write to GCS directly using gcsfs library
-confirmed_gcs_url = f"gs://{bucket}/jhu_covid19/confirmed.csv"
-deaths_gcs_url= f"gs://{bucket}/jhu_covid19/deaths.csv"
-
-storage_options = {
-    "project": os.getenv("PROJECT"),
-    "token": os.getenv("TOKEN"),
-}
-
 logging.basicConfig(level=logging.INFO)
+
+source_url = "https://query.data.world/s/tkm63elprbahtxgring545j277t6s6"
 
 
 def main(event, context):
@@ -44,21 +41,39 @@ def main(event, context):
     message_decoded = b64decode(event["data"].encode("ascii")).decode("ascii")
     message = json.loads(message_decoded) if message_decoded else {}
 
-    logging.info(f"Downloading confirmed: {confirmed_source_url}")
-    confirmed_df = pd.read_csv(confirmed_source_url)
+    logging.info(f"Downloading confirmed: {source_url}")
+    df = (
+        pd.read_csv(source_url)
+            .dropna(subset=["COUNTY_FIPS_NUMBER"])
+            .rename(columns={
+                "REPORT_DATE": "date_id",
+                "COUNTY_FIPS_NUMBER": "county_id",
+                "PEOPLE_POSITIVE_CASES_COUNT": "positives_total",
+                "PEOPLE_POSITIVE_NEW_CASES_COUNT": "positives_new",
+                "PEOPLE_DEATH_NEW_COUNT":  "deaths_new",
+                "PEOPLE_DEATH_COUNT": "deaths_total",
+            })[[
+                "date_id",
+                "county_id",
+                "positives_new",
+                "deaths_new",
+                "positives_total",
+                "deaths_total",
+            ]]
+    )
+    df["date_id"] = pd.to_datetime(df["date_id"]).dt.strftime("%Y%m%d")
+    df["county_id"] = df["county_id"].astype(int).astype(str).str.zfill(5)
+    df["county_date_id"] = df["county_id"] + df["date_id"]
 
-    logging.info(f"Downloading deaths: {deaths_source_url}")
-    deaths_df = pd.read_csv(deaths_source_url)
+    engine = create_engine(os.getenv("DATABASE_URI"))
 
-    confirmed_df.to_csv(confirmed_gcs_url, storage_options=storage_options)
-    logging.info(f"Stored confirmed: {confirmed_gcs_url}")
+    for chunk_idx in range(0, df.shape[0], 100_000):
+        chunk_df = df[chunk_idx:chunk_idx + 100_000]
+        logging.info(f"Inserting chunk: {chunk_idx}:{chunk_idx + chunk_df.shape[0]}")
+        with engine.begin() as conn:
+            chunk_df.to_sql("county_cases", con=conn, if_exists="append", index=False)
 
-    deaths_df.to_csv(deaths_gcs_url, storage_options=storage_options)
-    logging.info(f"Stored deaths: {deaths_gcs_url}")
-
-    # verify file written
-    df = pd.read_csv(confirmed_gcs_url, storage_options=storage_options)
-    logging.info(f"confirmed shape: {df.shape})")
+    df.to_csv("data/import/county_cases.csv", index=False)
 
 
 if __name__ == "__main__":

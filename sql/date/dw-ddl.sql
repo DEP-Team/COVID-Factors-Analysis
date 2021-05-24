@@ -29,4 +29,6 @@ CREATE TABLE `dim_date` (
     PRIMARY KEY (`date_key`),
 	UNIQUE KEY `date` (`date`),
 	KEY `date_year_week` (`year`,`week_of_year`)
+	INDEX `date_date_key_idx` (`date_key`),
+	INDEX `date_date_idx` (`date`)
 );

@@ -190,7 +190,7 @@ def main(event, context):
     #message_decoded = b64decode(event["data"].encode("ascii")).decode("ascii")
     #message = json.loads(message_decoded) if message_decoded else {}
 
-    engine = create_engine("mysql+mysqlconnector://root:password@localhost/covid")
+    engine = create_engine(os.getenv("DATABASE_URI"))
     load_states(engine)
     load_counties(engine)
     load_csas(engine)
