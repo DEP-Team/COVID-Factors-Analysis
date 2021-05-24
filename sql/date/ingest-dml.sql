@@ -19,6 +19,7 @@ SELECT thousands.number * 1000 + hundreds.number * 100 + tens.number * 10 + ones
   FROM numbers_small thousands, numbers_small hundreds, numbers_small tens, numbers_small ones
 LIMIT 1000000;
 TRUNCATE TABLE `date`;
+
 INSERT INTO `date` (
 	date_id,
 	date,
