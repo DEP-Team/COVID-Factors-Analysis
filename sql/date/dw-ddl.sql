@@ -23,7 +23,7 @@ CREATE TABLE `dim_date` (
 	last_day_of_year DATE NOT NULL,
 	yyyyww INT,
 	yyyymm INT,
-	holiday_name VARCHAR(20) NULL,
+	holiday_name VARCHAR(50) NULL,
 	holiday_flag BOOLEAN NOT NULL DEFAULT 0,
 	weekend_flag BOOLEAN NOT NULL DEFAULT 0,
     PRIMARY KEY (`date_key`),

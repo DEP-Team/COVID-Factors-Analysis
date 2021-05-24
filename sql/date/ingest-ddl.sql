@@ -40,10 +40,43 @@ CREATE TABLE IF NOT EXISTS `date` (
 	last_day_of_year DATE NOT NULL,
 	yyyyww INT,
 	yyyymm INT,
-	holiday_name VARCHAR(20) NULL,
+	holiday_name VARCHAR(50) NULL,
 	holiday_flag BOOLEAN NOT NULL DEFAULT 0,
 	weekend_flag BOOLEAN NOT NULL DEFAULT 0,
     PRIMARY KEY (`date_id`),
 	UNIQUE KEY `date` (`date`),
 	KEY `date_year_week` (`year`,`week_of_year`)
 );
+
+/**
+ * Credits: https://gist.github.com/drtomasso/e291633b5147d0be35e7
+ */
+ //
+DELIMITER //
+CREATE FUNCTION EasterSunday(inYear YEAR) RETURNS DATE DETERMINISTIC
+BEGIN
+    DECLARE a, b, c, d, e, f, g, h, i, k, l, m, n, p INT;
+
+    DECLARE es DATE;
+
+    SET a = MOD(inYear, 19);
+    SET b = FLOOR(inYear / 100);
+    SET c = MOD(inYear, 100);
+    SET d = FLOOR(b / 4);
+    SET e = MOD(b, 4);
+    SET f = FLOOR((b + 8) / 25);
+    SET g = FLOOR((b - f + 1) / 3);
+    SET h = MOD((19 * a + b - d - g + 15), 30);
+    SET i = FLOOR(c / 4);
+    SET k = MOD(c, 4);
+    SET l = MOD((32 + 2 * e + 2 * i - h - k), 7);
+    SET m = FLOOR((a + 11 * h + 22 * l) / 451);
+    SET n = FLOOR((h + l - 7 * m + 114) / 31);
+    SET p = MOD((h + l - 7 * m + 114), 31) + 1;
+
+    SET es = CONCAT_WS('-', inYear, n, p);
+
+    RETURN es;
+END
+//
+DELIMITER ;
