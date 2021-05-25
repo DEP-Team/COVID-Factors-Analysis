@@ -1,6 +1,6 @@
 use covid_dw;
 
-CREATE TABLE `dim_date` (
+CREATE TABLE IF NOT EXISTS `dim_date` (
     date_key INT NOT NULL,
 	date DATE NOT NULL,
 	timestamp  BIGINT NOT NULL,

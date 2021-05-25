@@ -1,0 +1,6 @@
+USE covid;
+
+LOAD DATA LOCAL INFILE "data/import/county_cases.csv"
+INTO TABLE county_cases
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '\"' ESCAPED BY '\"'
+LINES TERMINATED BY '\n' IGNORE 1 ROWS;

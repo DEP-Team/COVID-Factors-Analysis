@@ -135,11 +135,11 @@ CREATE TABLE IF NOT EXISTS `survey_response` (
   `respondents_count` INT NOT NULL,
   PRIMARY KEY (`survey_response_id`),
   UNIQUE KEY (`survey_id`, `region_id`, `response_id`, `characteristic_id`),
-  INDEX `survey_response_survey_response_id_idx` (`survey_response_id` ASC) VISIBLE,
+  INDEX `survey_response_survey_response_id_idx` (`survey_response_id`),
   INDEX `survey_response_survey_id_idx` (`survey_id`),
-  INDEX `survey_response_region_id_idx` (`region_id` ASC) VISIBLE,
-  INDEX `survey_response_response_id_idx` (`response_id` ASC) VISIBLE,
-  INDEX `survey_response_characteristic_id_idx` (`characteristic_id` ASC) VISIBLE,
+  INDEX `survey_response_region_id_idx` (`region_id`),
+  INDEX `survey_response_response_id_idx` (`response_id`),
+  INDEX `survey_response_characteristic_id_idx` (`characteristic_id`),
   CONSTRAINT `survey_response_survey_id_fk`
     FOREIGN KEY (`survey_id`)
     REFERENCES `survey` (`survey_id`),

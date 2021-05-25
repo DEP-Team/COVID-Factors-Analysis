@@ -10,9 +10,6 @@
 SET sql_mode = '';
 
 # load data
-LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/DEPA_FinalProject_Demographics_ImportMe_2021-05-23.csv'
-INTO TABLE `covid`.`county_demographics`
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS;
+LOAD DATA LOCAL INFILE 'data/import/county_demographics.csv'
+INTO TABLE `county_demographics` FIELDS TERMINATED BY ',' ENCLOSED BY '"'
+LINES TERMINATED BY '\n' IGNORE 1 ROWS;

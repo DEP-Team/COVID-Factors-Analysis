@@ -53,9 +53,11 @@ CREATE TABLE IF NOT EXISTS `date` (
 
 /**
  * Credits: https://gist.github.com/drtomasso/e291633b5147d0be35e7
- *
+ */
+DROP FUNCTION IF EXISTS EasterSunday;
+
 DELIMITER //
-CREATE FUNCTION IF NOT EXISTS EasterSunday(inYear YEAR) RETURNS DATE DETERMINISTIC
+CREATE FUNCTION EasterSunday(inYear YEAR) RETURNS DATE DETERMINISTIC
 BEGIN
     DECLARE a, b, c, d, e, f, g, h, i, k, l, m, n, p INT;
 
@@ -82,4 +84,3 @@ BEGIN
 END
 //
 DELIMITER ;
-*/

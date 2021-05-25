@@ -83,6 +83,10 @@ Requirements:
   virtualenv venv
   venv/bin/activate
   ```
+* Setup local MySQL database: make sure that environment variables are set correctly in `.env` and [Make is installed](https://stackoverflow.com/a/32127632) (Windows only).
+```sh
+make createdb importdb createdw loaddw
+```
 
 ### Running
 
@@ -122,6 +126,14 @@ gcloud scheduler jobs create pubsub ingest_feeds_$(name)_job\
     --topic ingest_feeds_$(name)\
     --message-body "{}"
 ```
+
+## CloudSQL
+### Getting setup with Cloud SQL:
+* Create Cloud SQL instance
+* Set instance flag: `log_bin_trust_function_creators=1`
+* Create database and users
+* Whitelist network (home IPs)
+* Run `make createdb importdb createdw loaddw`
 
 ## References
 
