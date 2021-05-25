@@ -1,0 +1,54 @@
+﻿characteristic_id,characteristic_type_id,label
+1,1,18 - 24
+2,1,25 - 39
+3,1,40 - 54
+4,1,55 - 64
+5,1,65 and above
+6,2,Male
+7,2,Female
+8,3,Hispanic or Latino - may be of any race
+9,3,White alone not Hispanic
+10,3,Black alone not Hispanic
+11,3,Asian alone not Hispanic
+12,3,Two or more races + Other races not Hispanic
+13,4,Less than high school
+14,4,High school or GED
+15,4,Some college-associate's degree
+16,4,Bachelor's degree or higher
+17,5,Married
+18,5,Widowed
+19,5,Divorced-separated
+20,5,Never married
+21,5,Did not report
+22,6,Less than $25000
+23,6,$25000 - $34999
+24,6,$35000 - $49999
+25,6,$50000 - $74999
+26,6,$75000 - $99999
+27,6,$100000 - $149999
+28,6,$150000 - $199999
+29,6,$200000 and above
+30,6,Did not report
+31,7,Yes
+32,7,No
+33,7,Not sure
+34,7,Did not report
+35,8,Concerned about possible side effects
+36,8,Don't know if a vaccine will work
+37,8,Don't like vaccines
+38,8,Doctor has not recommended it
+39,8,Plan to wait and see if it is safe
+40,8,Other people need it more right now
+41,8,Concerned about the cost
+42,8,Don't trust COVID-19 vaccines
+43,8,Don't trust the government
+44,8,Don't believe I need a vaccine
+45,8,Already had COVID-19
+46,8,Not a member of a high-risk group
+47,8,Plan to use masks or other precautions instead
+48,8,Don't believe COVID-19 is a serious illness
+49,8,Don't think vaccines are beneficial
+50,8,Other not believing they need vaccine
+51,8,Did not report to reasons for not believing they needed a vaccine
+52,8,Other reason for not receiving or planning to receive vaccine
+53,8,Did not report to reason for not receiving or planning to receive vaccine

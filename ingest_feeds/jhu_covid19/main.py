@@ -48,17 +48,17 @@ def main(event, context):
             .rename(columns={
                 "REPORT_DATE": "date_id",
                 "COUNTY_FIPS_NUMBER": "county_id",
-                "PEOPLE_POSITIVE_CASES_COUNT": "positives_total",
-                "PEOPLE_POSITIVE_NEW_CASES_COUNT": "positives_new",
-                "PEOPLE_DEATH_NEW_COUNT":  "deaths_new",
-                "PEOPLE_DEATH_COUNT": "deaths_total",
+                "PEOPLE_POSITIVE_CASES_COUNT": "total_cases",
+                "PEOPLE_POSITIVE_NEW_CASES_COUNT": "new_cases",
+                "PEOPLE_DEATH_NEW_COUNT":  "new_deaths",
+                "PEOPLE_DEATH_COUNT": "total_deaths",
             })[[
                 "date_id",
                 "county_id",
-                "positives_new",
-                "deaths_new",
-                "positives_total",
-                "deaths_total",
+                "new_cases",
+                "new_deaths",
+                "total_cases",
+                "total_deaths",
             ]]
     )
     df["date_id"] = pd.to_datetime(df["date_id"]).dt.strftime("%Y%m%d")

@@ -1,146 +1,108 @@
+USE covid_dw;
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
 -- This query tends to time out.
 SET GLOBAL connect_timeout=28800;
 SET GLOBAL interactive_timeout=28800;
 SET GLOBAL wait_timeout=28800;
 SET SQL_SAFE_UPDATES = 0;
 
-USE covid_dw;
 
 INSERT INTO `county_cases_daily` (
 	county_key,
     date_key,
     county_date_id,
-    positives_new,
+    cases_new,
     deaths_new,
-    positives_total,
+    cases_total,
     deaths_total,
-    positives_ma7d,
-    deaths_ma7d,
-    positives_ma14d,
-    deaths_ma14d
+    cases_new_per_100k,
+    deaths_new_per_100k,
+    case_rate,
+    death_rate,
+    case_rate_per_100k,
+    death_rate_per_100k
 ) SELECT
 		dim_county.county_key,
         cc.date_id,
         cc.county_date_id,
-        cc.positives_new,
-        cc.deaths_new,
-        cc.positives_total,
-        cc.deaths_total,
-        AVG(positives_new) OVER(PARTITION BY county_id ORDER BY date_id
+        cc.new_cases as cases_new,
+        cc.new_deaths as deaths_new,
+        cc.total_cases as cases_total,
+        cc.total_deaths as deaths_total,
+		cc.new_cases / cd.tot_population * 100000 as cases_new_per_100k,
+        cc.new_deaths / cd.tot_population * 100000 as deaths_new_per_100k,
+        cc.total_cases / cd.tot_population * 100000 as cases_total_per_100k,
+        cc.total_deaths / cd.tot_population * 100000 as deaths_total_per_100k,
+        AVG(new_cases) OVER(PARTITION BY cc.county_id ORDER BY date_id
 								ROWS BETWEEN 7 PRECEDING AND CURRENT ROW)
-			AS positives_ma7d,
-		AVG(deaths_new) OVER(PARTITION BY county_id ORDER BY date_id
+			AS case_rate,
+		AVG(new_deaths) OVER(PARTITION BY cc.county_id ORDER BY date_id
 								ROWS BETWEEN 7 PRECEDING AND CURRENT ROW)
-			AS deaths_ma7d,
-		AVG(positives_new) OVER(PARTITION BY county_id ORDER BY date_id
-								ROWS BETWEEN 7 PRECEDING AND CURRENT ROW)
-			AS positives_ma14d,
-		AVG(deaths_new) OVER(PARTITION BY county_id ORDER BY date_id
-								ROWS BETWEEN 7 PRECEDING AND CURRENT ROW)
-			AS deaths_ma14d
+			AS death_rate
 	FROM
 		covid.county_cases AS cc
         JOIN dim_county
 			USING (county_id)
+		JOIN county_demographics cd
+			USING (county_key)
 ;
 
 -- clean up cases where ma7d and ma14d are negative
-UPDATE `county_cases_daily`
-SET positives_ma7d = 0
-WHERE positives_ma7d < 0;
+UPDATE `county_cases_daily` SET case_rate = 0 WHERE case_rate < 0;
+UPDATE `county_cases_daily` SET death_rate = 0 WHERE death_rate < 0;
 
 UPDATE `county_cases_daily`
-SET deaths_ma7d = 0
-WHERE deaths_ma7d < 0;
+JOIN county_demographics USING (county_key)
+SET case_rate_per_100k = case_rate / tot_population * 100000,
+	death_rate_per_100k = death_rate / tot_population * 100000;
 
-UPDATE `county_cases_daily`
-SET positives_ma14d = 0
-WHERE positives_ma14d < 0;
-
-UPDATE `county_cases_daily`
-SET deaths_ma14d = 0
-WHERE deaths_ma14d < 0;
-
--- positives_ma7d_lag7, deaths_ma7d_lag7
-UPDATE `county_cases_daily` c1
-JOIN `dim_date` d1 USING (date_key)
-JOIN `dim_date` d2 ON d2.date = DATE_SUB(d1.date, INTERVAL 7 DAY)
-JOIN `county_cases_daily` c2
-	ON c2.county_key = c1.county_key
-    AND c2.date_key = d2.date_key
-SET c1.positives_ma7d_lag7 = c2.positives_ma7d,
-	c1.deaths_ma7d_lag7 = c2.deaths_ma7d;
-
--- positives_ma7d_lag14, deaths_ma7d_lag14
-UPDATE `county_cases_daily` c1
-JOIN `dim_date` d1 USING (date_key)
-JOIN `dim_date` d2 ON d2.date = DATE_SUB(d1.date, INTERVAL 14 DAY)
-JOIN `county_cases_daily` c2
-	ON c2.county_key = c1.county_key
-    AND c2.date_key = d2.date_key
-SET c1.positives_ma7d_lag14 = c2.positives_ma7d,
-	c1.deaths_ma7d_lag14 = c2.deaths_ma7d;
-
--- positives_ma7d_lead7, deaths_ma7d_lead7
-UPDATE `county_cases_daily` c1
-JOIN `dim_date` d1 USING (date_key)
-JOIN `dim_date` d2 ON d2.date = DATE_ADD(d1.date, INTERVAL 7 DAY)
-JOIN `county_cases_daily` c2
-	ON c2.county_key = c1.county_key
-    AND c2.date_key = d2.date_key
-SET c1.positives_ma7d_lead7 = c2.positives_ma7d,
-	c1.deaths_ma7d_lead7 = c2.deaths_ma7d;
-
--- positives_ma7d_lead14, deaths_ma7d_lead14
-UPDATE `county_cases_daily` c1
-JOIN `dim_date` d1 USING (date_key)
-JOIN `dim_date` d2 ON d2.date = DATE_ADD(d1.date, INTERVAL 14 DAY)
-JOIN `county_cases_daily` c2
-	ON c2.county_key = c1.county_key
-    AND c2.date_key = d2.date_key
-SET c1.positives_ma7d_lead14 = c2.positives_ma7d,
-	c1.deaths_ma7d_lead14 = c2.deaths_ma7d;
 
 --
 -- state-level aggregation
 --
 
+/*
 INSERT INTO `state_cases_daily` (
 	state_key,
     date_key,
-    positives_new,
+    county_date_id,
+    cases_new,
     deaths_new,
-    positives_total,
+    cases_total,
     deaths_total,
-    positives_ma7d,
-    deaths_ma7d,
-    positives_ma14d,
-    deaths_ma14d
+    cases_new_per_100k,
+    deaths_new_per_100k,
+    case_rate,
+    death_rate,
+    case_rate_per_100k,
+    death_rate_per_100k
 ) SELECT
 		state_key,
         date_key,
-        positives_new,
-        deaths_new,
-        positives_total,
-        deaths_total,
-        AVG(positives_new) OVER(PARTITION BY state_key ORDER BY date_key
+        cc.new_cases as cases_new,
+        cc.new_deaths as deaths_new,
+        cc.total_cases as cases_total,
+        cc.total_deaths as deaths_total,
+		cc.new_cases / cd.tot_population * 100000 as cases_new_per_100k,
+        cc.new_deaths / cd.tot_population * 100000 as deaths_new_per_100k,
+        cc.total_cases / cd.tot_population * 100000 as cases_total_per_100k,
+        cc.total_deaths / cd.tot_population * 100000 as deaths_total_per_100k,
+        AVG(new_cases) OVER(PARTITION BY cc.state_key ORDER BY date_id
 								ROWS BETWEEN 7 PRECEDING AND CURRENT ROW)
-			AS positives_ma7d,
-		AVG(deaths_new) OVER(PARTITION BY state_key ORDER BY date_key
+			AS case_rate,
+		AVG(new_deaths) OVER(PARTITION BY cc.state_key ORDER BY date_id
 								ROWS BETWEEN 7 PRECEDING AND CURRENT ROW)
-			AS deaths_ma7d,
-		AVG(positives_new) OVER(PARTITION BY state_key ORDER BY date_key
-								ROWS BETWEEN 7 PRECEDING AND CURRENT ROW)
-			AS positives_ma14d,
-		AVG(deaths_new) OVER(PARTITION BY state_key ORDER BY date_key
-								ROWS BETWEEN 7 PRECEDING AND CURRENT ROW)
-			AS deaths_ma14d
+			AS death_rate
 	FROM (
 		SELECT
     		dim_county.state_key,
 			cc.date_id AS date_key,
-			SUM(cc.positives_new) AS positives_new,
-			SUM(cc.deaths_new) AS deaths_new,
+			SUM(cc.new_cases) AS new_cases,
+			SUM(cc.new_deaths) AS new_deaths,
 			SUM(cc.positives_total) AS positives_total,
 			SUM(cc.deaths_total) AS deaths_total
 		FROM covid.county_cases AS cc
@@ -149,172 +111,9 @@ INSERT INTO `state_cases_daily` (
 		GROUP BY
 			state_key,
             date_key
-	) AS t
+	) AS cc
+	JOIN county_demographic AS cd
+		USING (county_key)
 ;
 
--- clean up cases where ma7d and ma14d are negative
-UPDATE `state_cases_daily`
-SET positives_ma7d = 0
-WHERE positives_ma7d < 0;
-
-UPDATE `state_cases_daily`
-SET deaths_ma7d = 0
-WHERE deaths_ma7d < 0;
-
-UPDATE `state_cases_daily`
-SET positives_ma14d = 0
-WHERE positives_ma14d < 0;
-
-UPDATE `state_cases_daily`
-SET deaths_ma14d = 0
-WHERE deaths_ma14d < 0;
-
--- positives_ma7d_lag7, deaths_ma7d_lag7
-UPDATE `state_cases_daily` c1
-JOIN `dim_date` d1 USING (date_key)
-JOIN `dim_date` d2 ON d2.date = DATE_SUB(d1.date, INTERVAL 7 DAY)
-JOIN `state_cases_daily` c2
-	ON c2.state_key = c1.state_key
-    AND c2.date_key = d2.date_key
-SET c1.positives_ma7d_lag7 = c2.positives_ma7d,
-	c1.deaths_ma7d_lag7 = c2.deaths_ma7d;
-
--- positives_ma7d_lag14, deaths_ma7d_lag14
-UPDATE `state_cases_daily` c1
-JOIN `dim_date` d1 USING (date_key)
-JOIN `dim_date` d2 ON d2.date = DATE_SUB(d1.date, INTERVAL 14 DAY)
-JOIN `state_cases_daily` c2
-	ON c2.state_key = c1.state_key
-    AND c2.date_key = d2.date_key
-SET c1.positives_ma7d_lag14 = c2.positives_ma7d,
-	c1.deaths_ma7d_lag14 = c2.deaths_ma7d;
-
--- positives_ma7d_lead7, deaths_ma7d_lead7
-UPDATE `state_cases_daily` c1
-JOIN `dim_date` d1 USING (date_key)
-JOIN `dim_date` d2 ON d2.date = DATE_ADD(d1.date, INTERVAL 7 DAY)
-JOIN `state_cases_daily` c2
-	ON c2.state_key = c1.state_key
-    AND c2.date_key = d2.date_key
-SET c1.positives_ma7d_lead7 = c2.positives_ma7d,
-	c1.deaths_ma7d_lead7 = c2.deaths_ma7d;
-
--- positives_ma7d_lead14, deaths_ma7d_lead14
-UPDATE `state_cases_daily` c1
-JOIN `dim_date` d1 USING (date_key)
-JOIN `dim_date` d2 ON d2.date = DATE_ADD(d1.date, INTERVAL 14 DAY)
-JOIN `state_cases_daily` c2
-	ON c2.state_key = c1.state_key
-    AND c2.date_key = d2.date_key
-SET c1.positives_ma7d_lead14 = c2.positives_ma7d,
-	c1.deaths_ma7d_lead14 = c2.deaths_ma7d;
-
---
--- csa aggregates
---
-
-INSERT INTO `csa_cases_daily` (
-	csa_key,
-    date_key,
-    positives_new,
-    deaths_new,
-    positives_total,
-    deaths_total,
-    positives_ma7d,
-    deaths_ma7d,
-    positives_ma14d,
-    deaths_ma14d
-) SELECT
-		csa_key,
-        date_key,
-        positives_new,
-        deaths_new,
-        positives_total,
-        deaths_total,
-        AVG(positives_new) OVER(PARTITION BY csa_key ORDER BY date_key
-								ROWS BETWEEN 7 PRECEDING AND CURRENT ROW)
-			AS positives_ma7d,
-		AVG(deaths_new) OVER(PARTITION BY csa_key ORDER BY date_key
-								ROWS BETWEEN 7 PRECEDING AND CURRENT ROW)
-			AS deaths_ma7d,
-		AVG(positives_new) OVER(PARTITION BY csa_key ORDER BY date_key
-								ROWS BETWEEN 7 PRECEDING AND CURRENT ROW)
-			AS positives_ma14d,
-		AVG(deaths_new) OVER(PARTITION BY csa_key ORDER BY date_key
-								ROWS BETWEEN 7 PRECEDING AND CURRENT ROW)
-			AS deaths_ma14d
-	FROM (
-		SELECT
-    		dim_county.csa_key,
-			cc.date_id AS date_key,
-			SUM(cc.positives_new) AS positives_new,
-			SUM(cc.deaths_new) AS deaths_new,
-			SUM(cc.positives_total) AS positives_total,
-			SUM(cc.deaths_total) AS deaths_total
-		FROM covid.county_cases AS cc
-        JOIN dim_county
-			USING (county_id)
-		WHERE
-			dim_county.csa_key IS NOT NULL
-		GROUP BY
-			csa_key,
-            date_key
-	) AS t
-;
-
--- clean up cases where ma7d and ma14d are negative
-UPDATE `csa_cases_daily`
-SET positives_ma7d = 0
-WHERE positives_ma7d < 0;
-
-UPDATE `csa_cases_daily`
-SET deaths_ma7d = 0
-WHERE deaths_ma7d < 0;
-
-UPDATE `csa_cases_daily`
-SET positives_ma14d = 0
-WHERE positives_ma14d < 0;
-
-UPDATE `csa_cases_daily`
-SET deaths_ma14d = 0
-WHERE deaths_ma14d < 0;
-
--- positives_ma7d_lag7, deaths_ma7d_lag7
-UPDATE `csa_cases_daily` c1
-JOIN `dim_date` d1 USING (date_key)
-JOIN `dim_date` d2 ON d2.date = DATE_SUB(d1.date, INTERVAL 7 DAY)
-JOIN `csa_cases_daily` c2
-	ON c2.csa_key = c1.csa_key
-    AND c2.date_key = d2.date_key
-SET c1.positives_ma7d_lag7 = c2.positives_ma7d,
-	c1.deaths_ma7d_lag7 = c2.deaths_ma7d;
-
--- positives_ma7d_lag14, deaths_ma7d_lag14
-UPDATE `csa_cases_daily` c1
-JOIN `dim_date` d1 USING (date_key)
-JOIN `dim_date` d2 ON d2.date = DATE_SUB(d1.date, INTERVAL 14 DAY)
-JOIN `csa_cases_daily` c2
-	ON c2.csa_key = c1.csa_key
-    AND c2.date_key = d2.date_key
-SET c1.positives_ma7d_lag14 = c2.positives_ma7d,
-	c1.deaths_ma7d_lag14 = c2.deaths_ma7d;
-
--- positives_ma7d_lead7, deaths_ma7d_lead7
-UPDATE `csa_cases_daily` c1
-JOIN `dim_date` d1 USING (date_key)
-JOIN `dim_date` d2 ON d2.date = DATE_ADD(d1.date, INTERVAL 7 DAY)
-JOIN `csa_cases_daily` c2
-	ON c2.csa_key = c1.csa_key
-    AND c2.date_key = d2.date_key
-SET c1.positives_ma7d_lead7 = c2.positives_ma7d,
-	c1.deaths_ma7d_lead7 = c2.deaths_ma7d;
-
--- positives_ma7d_lead14, deaths_ma7d_lead14
-UPDATE `csa_cases_daily` c1
-JOIN `dim_date` d1 USING (date_key)
-JOIN `dim_date` d2 ON d2.date = DATE_ADD(d1.date, INTERVAL 14 DAY)
-JOIN `csa_cases_daily` c2
-	ON c2.csa_key = c1.csa_key
-    AND c2.date_key = d2.date_key
-SET c1.positives_ma7d_lead14 = c2.positives_ma7d,
-	c1.deaths_ma7d_lead14 = c2.deaths_ma7d;
+*/

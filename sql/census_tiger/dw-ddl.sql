@@ -15,29 +15,44 @@ CREATE TABLE IF NOT EXISTS `dim_state` (
     PRIMARY KEY (`state_key`),
 	UNIQUE KEY (`state_id`),
     UNIQUE KEY (`state_fips`),
-    INDEX `state_name_idx` (`name`),
-    INDEX `state_abbrev_idx` (`abbrev`),
-    INDEX `state_id_idx` (`state_id`),
-    INDEX `state_fips_idx` (`state_fips`)
+    INDEX `dim_state_name_idx` (`name`),
+    INDEX `dim_state_abbrev_idx` (`abbrev`),
+    INDEX `dim_state_id_idx` (`state_id`),
+    INDEX `dim_state_fips_idx` (`state_fips`)
 );
 
 CREATE TABLE IF NOT EXISTS `dim_csa` (
 	`csa_key` INT NOT NULL AUTO_INCREMENT,
 	`csa_id` INT NOT NULL,
+	`csa_fips` VARCHAR(6) NULL,
 	`name` VARCHAR(100) NOT NULL,
-    `type` VARCHAR(100) NOT NULL,
     PRIMARY KEY (`csa_key`),
     UNIQUE KEY (`csa_id`),
     UNIQUE KEY (`name`),
-    INDEX `csa_csa_key_idx` (`csa_key`),
-    INDEX `csa_csa_id_idx` (`csa_id`),
-    INDEX `csa_name_idx` (`name`)
+    INDEX `dim_csa_csa_key_idx` (`csa_key`),
+    INDEX `dim_csa_csa_id_idx` (`csa_id`),
+    INDEX `dim_csa_name_idx` (`name`)
+);
+
+CREATE TABLE IF NOT EXISTS `dim_msa` (
+	`msa_key` INT NOT NULL AUTO_INCREMENT,
+	`msa_id` INT NOT NULL,
+	`msa_fips` VARCHAR(6) NULL,
+	`name` VARCHAR(100) NOT NULL,
+    `type` VARCHAR(100) NOT NULL,
+    PRIMARY KEY (`msa_key`),
+    UNIQUE KEY (`msa_id`),
+    UNIQUE KEY (`name`),
+    INDEX `dim_msa_msa_key_idx` (`msa_key`),
+    INDEX `dim_msa_msa_id_idx` (`msa_id`),
+    INDEX `dim_msa_name_idx` (`name`)
 );
 
 CREATE TABLE IF NOT EXISTS `dim_county` (
 	`county_key` INT NOT NULL AUTO_INCREMENT,
     `state_key` INT NOT NULL,
     `csa_key` INT NULL,
+    `msa_key` INT NULL,
 	`county_id` VARCHAR(5) NOT NULL,
 	`name` VARCHAR(50) NOT NULL,
 	`county_fips` VARCHAR(3) NOT NULL,
@@ -49,14 +64,19 @@ CREATE TABLE IF NOT EXISTS `dim_county` (
     `csa_centrality` VARCHAR(10) NULL,
     PRIMARY KEY (`county_key`),
     UNIQUE KEY (`county_id`),
-    INDEX `county_state_key_idx` (`state_key`),
-	INDEX `county_csa_key_idx` (`csa_key`),
-    INDEX `county_id_idx` (`county_id`),
-    INDEX `county_name_idx` (`name`),
-	CONSTRAINT `county_state_key_fk`
+    INDEX `dim_county_state_key_idx` (`state_key`),
+	INDEX `dim_county_csa_key_idx` (`csa_key`),
+	INDEX `dim_county_msa_key_idx` (`msa_key`),
+    INDEX `dim_county_id_idx` (`county_id`),
+    INDEX `dim_county_name_idx` (`name`),
+	CONSTRAINT `dim_county_state_key_fk`
 		FOREIGN KEY (`state_key`)
-		REFERENCES `state` (`state_key`),
-	CONSTRAINT `county_csa_key_fk`
+		REFERENCES `dim_state` (`state_key`),
+	CONSTRAINT `dim_county_csa_key_fk`
 		FOREIGN KEY (`csa_key`)
-		REFERENCES `csa` (`csa_key`)
+		REFERENCES `dim_csa` (`csa_key`),
+	CONSTRAINT `dim_county_msa_key_fk`
+		FOREIGN KEY (`msa_key`)
+		REFERENCES `dim_msa` (`msa_key`)
 );
+

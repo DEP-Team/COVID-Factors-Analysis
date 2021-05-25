@@ -1,176 +1,176 @@
-csa_id,name,type
-220,"Detroit-Warren-Ann Arbor, MI",Micropolitan Statistical Area
-184,"Cleveland-Akron-Canton, OH",Metropolitan Statistical Area
-440,"Portland-Vancouver-Salem, OR-WA",Metropolitan Statistical Area
-104,"Albany-Schenectady, NY",Metropolitan Statistical Area
-172,"Charlotte-Concord, NC-SC",Micropolitan Statistical Area
-106,"Albuquerque-Santa Fe-Las Vegas, NM",Metropolitan Statistical Area
-388,"Montgomery-Selma-Alexander City, AL",Micropolitan Statistical Area
-204,"Corpus Christi-Kingsville-Alice, TX",Micropolitan Statistical Area
-394,"Mount Pleasant-Alma, MI",Micropolitan Statistical Area
-107,"Altoona-Huntingdon, PA",Metropolitan Statistical Area
-108,"Amarillo-Pampa-Borger, TX",Metropolitan Statistical Area
-218,"Des Moines-Ames-West Des Moines, IA",Metropolitan Statistical Area
-258,"Fort Wayne-Huntington-Auburn, IN",Micropolitan Statistical Area
-118,"Appleton-Oshkosh-Neenah, WI",Metropolitan Statistical Area
-412,"North Port-Sarasota, FL",Micropolitan Statistical Area
-490,"San Juan-Bayamón, PR",Metropolitan Statistical Area
-120,"Asheville-Marion-Brevard, NC",Metropolitan Statistical Area
-360,"Mansfield-Ashland-Bucyrus, OH",Micropolitan Statistical Area
-312,"Kansas City-Overland Park-Kansas City, MO-KS",Micropolitan Statistical Area
-174,"Chattanooga-Cleveland-Dalton, TN-GA",Micropolitan Statistical Area
-206,"Dallas-Fort Worth, TX-OK",Micropolitan Statistical Area
-122,"Atlanta--Athens-Clarke County--Sandy Springs, GA-AL",Metropolitan Statistical Area
-428,"Philadelphia-Reading-Camden, PA-NJ-DE-MD",Metropolitan Statistical Area
-426,"Pensacola-Ferry Pass, FL-AL",Micropolitan Statistical Area
-532,"Syracuse-Auburn, NY",Micropolitan Statistical Area
-194,"Columbus-Auburn-Opelika, GA-AL",Metropolitan Statistical Area
-462,"Rochester-Austin, MN",Micropolitan Statistical Area
-548,"Washington-Baltimore-Arlington, DC-MD-VA-WV-PA",Metropolitan Statistical Area
-357,"Madison-Janesville-Beloit, WI",Micropolitan Statistical Area
-350,"Louisville/Jefferson County--Elizabethtown--Bardstown, KY-IN",Micropolitan Statistical Area
-148,"Boston-Worcester-Providence, MA-RI-NH-CT",Metropolitan Statistical Area
-162,"Burlington-South Burlington-Barre, VT",Micropolitan Statistical Area
-538,"Tulsa-Muskogee-Bartlesville, OK",Micropolitan Statistical Area
-464,"Rochester-Batavia-Seneca Falls, NY",Micropolitan Statistical Area
-310,"Kalamazoo-Battle Creek-Portage, MI",Metropolitan Statistical Area
-474,"Saginaw-Midland-Bay City, MI",Metropolitan Statistical Area
-288,"Houston-The Woodlands, TX",Micropolitan Statistical Area
-339,"Lincoln-Beatrice, NE",Micropolitan Statistical Area
-376,"Milwaukee-Racine-Waukesha, WI",Micropolitan Statistical Area
-144,"Bloomington-Bedford, IN",Micropolitan Statistical Area
-198,"Columbus-Marion-Zanesville, OH",Micropolitan Statistical Area
-140,"Bend-Prineville, OR",Metropolitan Statistical Area
-266,"Grand Rapids-Kentwood-Muskegon, MI",Micropolitan Statistical Area
-142,"Birmingham-Hoover-Talladega, AL",Metropolitan Statistical Area
-292,"Idaho Falls-Rexburg-Blackfoot, ID",Micropolitan Statistical Area
-145,"Bloomington-Pontiac, IL",Metropolitan Statistical Area
-146,"Bloomsburg-Berwick-Sunbury, PA",Metropolitan Statistical Area
-406,"New Orleans-Metairie-Hammond, LA-MS",Micropolitan Statistical Area
-147,"Boise City-Mountain Home-Ontario, ID-OR",Metropolitan Statistical Area
-216,"Denver-Aurora, CO",Metropolitan Statistical Area
-150,"Bowling Green-Glasgow, KY",Metropolitan Statistical Area
-500,"Seattle-Tacoma, WA",Metropolitan Statistical Area
-408,"New York-Newark, NY-NJ-CT-PA",Metropolitan Statistical Area
-298,"Jackson-Vicksburg-Brookhaven, MS",Micropolitan Statistical Area
-297,"Jackson-Brownsville, TN",Micropolitan Statistical Area
-154,"Brownsville-Harlingen-Raymondville, TX",Metropolitan Statistical Area
-160,"Buffalo-Cheektowaga-Olean, NY",Metropolitan Statistical Area
-161,"Burlington-Fort Madison-Keokuk, IA-IL-MO",Micropolitan Statistical Area
-268,"Greensboro--Winston-Salem--High Point, NC",Metropolitan Statistical Area
-480,"Salisbury-Cambridge, MD-DE",Micropolitan Statistical Area
-444,"Pueblo-Cañon City, CO",Micropolitan Statistical Area
-163,"Cape Coral-Fort Myers-Naples, FL",Metropolitan Statistical Area
-164,"Cape Girardeau-Sikeston, MO-IL",Metropolitan Statistical Area
-456,"Reno-Carson City-Fernley, NV",Metropolitan Statistical Area
-168,"Cedar Rapids-Iowa City, IA",Metropolitan Statistical Area
-338,"Lima-Van Wert-Celina, OH",Micropolitan Statistical Area
-476,"St. Louis-St. Charles-Farmington, MO-IL",Micropolitan Statistical Area
-170,"Charleston-Huntington-Ashland, WV-OH-KY",Metropolitan Statistical Area
-176,"Chicago-Naperville, IL-IN-WI",Metropolitan Statistical Area
-178,"Cincinnati-Wilmington-Maysville, OH-KY-IN",Metropolitan Statistical Area
-185,"Cleveland-Indianola, MS",Micropolitan Statistical Area
-209,"Davenport-Moline, IA-IL",Micropolitan Statistical Area
-188,"Clovis-Portales, NM",Micropolitan Statistical Area
-434,"Ponce-Yauco-Coamo, PR",Micropolitan Statistical Area
-518,"Spokane-Spokane Valley-Coeur d'Alene, WA-ID",Metropolitan Statistical Area
-190,"Columbia-Moberly-Mexico, MO",Metropolitan Statistical Area
-192,"Columbia-Orangeburg-Newberry, SC",Metropolitan Statistical Area
-294,"Indianapolis-Carmel-Muncie, IN",Metropolitan Statistical Area
-200,"Columbus-West Point, MS",Micropolitan Statistical Area
-458,"Richmond-Connersville, IN",Micropolitan Statistical Area
-539,"Tupelo-Corinth, MS",Micropolitan Statistical Area
-236,"Elmira-Corning, NY",Micropolitan Statistical Area
-296,"Ithaca-Cortland, NY",Micropolitan Statistical Area
-525,"Steamboat Springs-Craig, CO",Micropolitan Statistical Area
-380,"Mobile-Daphne-Fairhope, AL",Metropolitan Statistical Area
-212,"Dayton-Springfield-Kettering, OH",Metropolitan Statistical Area
-290,"Huntsville-Decatur, AL",Metropolitan Statistical Area
-422,"Orlando-Lakeland-Deltona, FL",Metropolitan Statistical Area
-217,"DeRidder-Fort Polk South, LA",Micropolitan Statistical Area
-221,"Dixon-Sterling, IL",Micropolitan Statistical Area
-222,"Dothan-Ozark, AL",Metropolitan Statistical Area
-524,"State College-DuBois, PA",Micropolitan Statistical Area
-450,"Raleigh-Durham-Cary, NC",Metropolitan Statistical Area
-232,"Eau Claire-Menomonie, WI",Metropolitan Statistical Area
-233,"Edwards-Glenwood Springs, CO",Micropolitan Statistical Area
-545,"Virginia Beach-Norfolk, VA-NC",Micropolitan Statistical Area
-515,"South Bend-Elkhart-Mishawaka, IN-MI",Metropolitan Statistical Area
-238,"El Paso-Las Cruces, TX-NM",Metropolitan Statistical Area
-240,"Erie-Meadville, PA",Metropolitan Statistical Area
-390,"Morgantown-Fairmont, WV",Micropolitan Statistical Area
-244,"Fargo-Wahpeton, ND-MN",Metropolitan Statistical Area
-378,"Minneapolis-St. Paul, MN-WI",Micropolitan Statistical Area
-246,"Fayetteville-Sanford-Lumberton, NC",Metropolitan Statistical Area
-534,"Toledo-Findlay-Tiffin, OH",Micropolitan Statistical Area
-368,"Memphis-Forrest City, TN-MS-AR",Micropolitan Statistical Area
-497,"Scottsboro-Fort Payne, AL",Micropolitan Statistical Area
-320,"Lafayette-West Lafayette-Frankfort, IN",Micropolitan Statistical Area
-336,"Lexington-Fayette--Richmond--Frankfort, KY",Micropolitan Statistical Area
-314,"Kerrville-Fredericksburg, TX",Micropolitan Statistical Area
-466,"Rockford-Freeport-Rochelle, IL",Micropolitan Statistical Area
-420,"Omaha-Council Bluffs-Fremont, NE-IA",Micropolitan Statistical Area
-260,"Fresno-Madera-Hanford, CA",Metropolitan Statistical Area
-273,"Greenville-Spartanburg-Anderson, SC",Micropolitan Statistical Area
-264,"Gainesville-Lake City, FL",Metropolitan Statistical Area
-396,"Myrtle Beach-Conway, SC-NC",Micropolitan Statistical Area
-276,"Harrisburg-York-Lebanon, PA",Metropolitan Statistical Area
-366,"Medford-Grants Pass, OR",Metropolitan Statistical Area
-267,"Green Bay-Shawano, WI",Metropolitan Statistical Area
-272,"Greenville-Kinston-Washington, NC",Metropolitan Statistical Area
-448,"Quincy-Hannibal, IL-MO",Micropolitan Statistical Area
-277,"Harrisonburg-Staunton, VA",Metropolitan Statistical Area
-278,"Hartford-East Hartford, CT",Metropolitan Statistical Area
-279,"Hattiesburg-Laurel, MS",Metropolitan Statistical Area
-482,"Salt Lake City-Provo-Orem, UT",Micropolitan Statistical Area
-496,"Savannah-Hinesville-Statesboro, GA",Metropolitan Statistical Area
-284,"Hot Springs-Malvern, AR",Metropolitan Statistical Area
-430,"Pittsburgh-New Castle-Weirton, PA-OH-WV",Micropolitan Statistical Area
-361,"Marinette-Iron Mountain, WI-MI",Micropolitan Statistical Area
-300,"Jacksonville-St. Marys-Palatka, FL-GA",Metropolitan Statistical Area
-522,"Springfield-Jacksonville-Lincoln, IL",Micropolitan Statistical Area
-540,"Tyler-Jacksonville, TX",Micropolitan Statistical Area
-324,"Lake Charles-Jennings, LA",Micropolitan Statistical Area
-304,"Johnson City-Kingsport-Bristol, TN-VA",Metropolitan Statistical Area
-306,"Johnstown-Somerset, PA",Metropolitan Statistical Area
-308,"Jonesboro-Paragould, AR",Metropolitan Statistical Area
-309,"Joplin-Miami, MO-OK",Metropolitan Statistical Area
-313,"Kennewick-Richland-Walla Walla, WA",Metropolitan Statistical Area
-370,"Miami-Port St. Lucie-Fort Lauderdale, FL",Micropolitan Statistical Area
-315,"Knoxville-Morristown-Sevierville, TN",Metropolitan Statistical Area
-316,"Kokomo-Peru, IN",Metropolitan Statistical Area
-318,"Lafayette-Opelousas-Morgan City, LA",Metropolitan Statistical Area
-332,"Las Vegas-Henderson, NV",Metropolitan Statistical Area
-400,"Nashville-Davidson--Murfreesboro, TN",Micropolitan Statistical Area
-352,"Lubbock-Plainview-Levelland, TX",Micropolitan Statistical Area
-438,"Portland-Lewiston-South Portland, ME",Metropolitan Statistical Area
-340,"Little Rock-North Little Rock, AR",Metropolitan Statistical Area
-558,"Williamsport-Lock Haven, PA",Micropolitan Statistical Area
-348,"Los Angeles-Long Beach, CA",Metropolitan Statistical Area
-356,"Macon-Bibb County--Warner Robins, GA",Metropolitan Statistical Area
-359,"Mankato-New Ulm, MN",Metropolitan Statistical Area
-425,"Parkersburg-Marietta-Vienna, WV-OH",Micropolitan Statistical Area
-362,"Martin-Union City, TN",Micropolitan Statistical Area
-364,"Mayagüez-San Germán, PR",Metropolitan Statistical Area
-424,"Paducah-Mayfield, KY-IL",Micropolitan Statistical Area
-365,"McAllen-Edinburg, TX",Metropolitan Statistical Area
-488,"San Jose-San Francisco-Oakland, CA",Metropolitan Statistical Area
-372,"Midland-Odessa, TX",Metropolitan Statistical Area
-508,"Shreveport-Bossier City-Minden, LA",Micropolitan Statistical Area
-384,"Monroe-Ruston, LA",Metropolitan Statistical Area
-404,"New Bern-Morehead City, NC",Micropolitan Statistical Area
-446,"Pullman-Moscow, WA-ID",Micropolitan Statistical Area
-393,"Moses Lake-Othello, WA",Micropolitan Statistical Area
-536,"Tucson-Nogales, AZ",Micropolitan Statistical Area
-416,"Oklahoma City-Shawnee, OK",Metropolitan Statistical Area
-429,"Phoenix-Mesa, AZ",Micropolitan Statistical Area
-484,"San Antonio-New Braunfels-Pearsall, TX",Micropolitan Statistical Area
-544,"Victoria-Port Lavaca, TX",Micropolitan Statistical Area
-452,"Rapid City-Spearfish, SD",Metropolitan Statistical Area
-454,"Redding-Red Bluff, CA",Micropolitan Statistical Area
-468,"Rocky Mount-Wilson-Roanoke Rapids, NC",Micropolitan Statistical Area
-472,"Sacramento-Roseville, CA",Metropolitan Statistical Area
-566,"Youngstown-Warren, OH-PA",Micropolitan Statistical Area
-517,"Spencer-Spirit Lake, IA",Micropolitan Statistical Area
-554,"Wausau-Stevens Point-Wisconsin Rapids, WI",Micropolitan Statistical Area
-556,"Wichita-Winfield, KS",Metropolitan Statistical Area
+csa_id,csa_fips,name
+220,220,"Detroit-Warren-Ann Arbor, MI"
+184,184,"Cleveland-Akron-Canton, OH"
+440,440,"Portland-Vancouver-Salem, OR-WA"
+104,104,"Albany-Schenectady, NY"
+172,172,"Charlotte-Concord, NC-SC"
+106,106,"Albuquerque-Santa Fe-Las Vegas, NM"
+388,388,"Montgomery-Selma-Alexander City, AL"
+204,204,"Corpus Christi-Kingsville-Alice, TX"
+394,394,"Mount Pleasant-Alma, MI"
+107,107,"Altoona-Huntingdon, PA"
+108,108,"Amarillo-Pampa-Borger, TX"
+218,218,"Des Moines-Ames-West Des Moines, IA"
+258,258,"Fort Wayne-Huntington-Auburn, IN"
+118,118,"Appleton-Oshkosh-Neenah, WI"
+412,412,"North Port-Sarasota, FL"
+490,490,"San Juan-Bayamón, PR"
+120,120,"Asheville-Marion-Brevard, NC"
+360,360,"Mansfield-Ashland-Bucyrus, OH"
+312,312,"Kansas City-Overland Park-Kansas City, MO-KS"
+174,174,"Chattanooga-Cleveland-Dalton, TN-GA"
+206,206,"Dallas-Fort Worth, TX-OK"
+122,122,"Atlanta--Athens-Clarke County--Sandy Springs, GA-AL"
+428,428,"Philadelphia-Reading-Camden, PA-NJ-DE-MD"
+426,426,"Pensacola-Ferry Pass, FL-AL"
+532,532,"Syracuse-Auburn, NY"
+194,194,"Columbus-Auburn-Opelika, GA-AL"
+462,462,"Rochester-Austin, MN"
+548,548,"Washington-Baltimore-Arlington, DC-MD-VA-WV-PA"
+357,357,"Madison-Janesville-Beloit, WI"
+350,350,"Louisville/Jefferson County--Elizabethtown--Bardstown, KY-IN"
+148,148,"Boston-Worcester-Providence, MA-RI-NH-CT"
+162,162,"Burlington-South Burlington-Barre, VT"
+538,538,"Tulsa-Muskogee-Bartlesville, OK"
+464,464,"Rochester-Batavia-Seneca Falls, NY"
+310,310,"Kalamazoo-Battle Creek-Portage, MI"
+474,474,"Saginaw-Midland-Bay City, MI"
+288,288,"Houston-The Woodlands, TX"
+339,339,"Lincoln-Beatrice, NE"
+376,376,"Milwaukee-Racine-Waukesha, WI"
+144,144,"Bloomington-Bedford, IN"
+198,198,"Columbus-Marion-Zanesville, OH"
+140,140,"Bend-Prineville, OR"
+266,266,"Grand Rapids-Kentwood-Muskegon, MI"
+142,142,"Birmingham-Hoover-Talladega, AL"
+292,292,"Idaho Falls-Rexburg-Blackfoot, ID"
+145,145,"Bloomington-Pontiac, IL"
+146,146,"Bloomsburg-Berwick-Sunbury, PA"
+406,406,"New Orleans-Metairie-Hammond, LA-MS"
+147,147,"Boise City-Mountain Home-Ontario, ID-OR"
+216,216,"Denver-Aurora, CO"
+150,150,"Bowling Green-Glasgow, KY"
+500,500,"Seattle-Tacoma, WA"
+408,408,"New York-Newark, NY-NJ-CT-PA"
+298,298,"Jackson-Vicksburg-Brookhaven, MS"
+297,297,"Jackson-Brownsville, TN"
+154,154,"Brownsville-Harlingen-Raymondville, TX"
+160,160,"Buffalo-Cheektowaga-Olean, NY"
+161,161,"Burlington-Fort Madison-Keokuk, IA-IL-MO"
+268,268,"Greensboro--Winston-Salem--High Point, NC"
+480,480,"Salisbury-Cambridge, MD-DE"
+444,444,"Pueblo-Cañon City, CO"
+163,163,"Cape Coral-Fort Myers-Naples, FL"
+164,164,"Cape Girardeau-Sikeston, MO-IL"
+456,456,"Reno-Carson City-Fernley, NV"
+168,168,"Cedar Rapids-Iowa City, IA"
+338,338,"Lima-Van Wert-Celina, OH"
+476,476,"St. Louis-St. Charles-Farmington, MO-IL"
+170,170,"Charleston-Huntington-Ashland, WV-OH-KY"
+176,176,"Chicago-Naperville, IL-IN-WI"
+178,178,"Cincinnati-Wilmington-Maysville, OH-KY-IN"
+185,185,"Cleveland-Indianola, MS"
+209,209,"Davenport-Moline, IA-IL"
+188,188,"Clovis-Portales, NM"
+434,434,"Ponce-Yauco-Coamo, PR"
+518,518,"Spokane-Spokane Valley-Coeur d'Alene, WA-ID"
+190,190,"Columbia-Moberly-Mexico, MO"
+192,192,"Columbia-Orangeburg-Newberry, SC"
+294,294,"Indianapolis-Carmel-Muncie, IN"
+200,200,"Columbus-West Point, MS"
+458,458,"Richmond-Connersville, IN"
+539,539,"Tupelo-Corinth, MS"
+236,236,"Elmira-Corning, NY"
+296,296,"Ithaca-Cortland, NY"
+525,525,"Steamboat Springs-Craig, CO"
+380,380,"Mobile-Daphne-Fairhope, AL"
+212,212,"Dayton-Springfield-Kettering, OH"
+290,290,"Huntsville-Decatur, AL"
+422,422,"Orlando-Lakeland-Deltona, FL"
+217,217,"DeRidder-Fort Polk South, LA"
+221,221,"Dixon-Sterling, IL"
+222,222,"Dothan-Ozark, AL"
+524,524,"State College-DuBois, PA"
+450,450,"Raleigh-Durham-Cary, NC"
+232,232,"Eau Claire-Menomonie, WI"
+233,233,"Edwards-Glenwood Springs, CO"
+545,545,"Virginia Beach-Norfolk, VA-NC"
+515,515,"South Bend-Elkhart-Mishawaka, IN-MI"
+238,238,"El Paso-Las Cruces, TX-NM"
+240,240,"Erie-Meadville, PA"
+390,390,"Morgantown-Fairmont, WV"
+244,244,"Fargo-Wahpeton, ND-MN"
+378,378,"Minneapolis-St. Paul, MN-WI"
+246,246,"Fayetteville-Sanford-Lumberton, NC"
+534,534,"Toledo-Findlay-Tiffin, OH"
+368,368,"Memphis-Forrest City, TN-MS-AR"
+497,497,"Scottsboro-Fort Payne, AL"
+320,320,"Lafayette-West Lafayette-Frankfort, IN"
+336,336,"Lexington-Fayette--Richmond--Frankfort, KY"
+314,314,"Kerrville-Fredericksburg, TX"
+466,466,"Rockford-Freeport-Rochelle, IL"
+420,420,"Omaha-Council Bluffs-Fremont, NE-IA"
+260,260,"Fresno-Madera-Hanford, CA"
+273,273,"Greenville-Spartanburg-Anderson, SC"
+264,264,"Gainesville-Lake City, FL"
+396,396,"Myrtle Beach-Conway, SC-NC"
+276,276,"Harrisburg-York-Lebanon, PA"
+366,366,"Medford-Grants Pass, OR"
+267,267,"Green Bay-Shawano, WI"
+272,272,"Greenville-Kinston-Washington, NC"
+448,448,"Quincy-Hannibal, IL-MO"
+277,277,"Harrisonburg-Staunton, VA"
+278,278,"Hartford-East Hartford, CT"
+279,279,"Hattiesburg-Laurel, MS"
+482,482,"Salt Lake City-Provo-Orem, UT"
+496,496,"Savannah-Hinesville-Statesboro, GA"
+284,284,"Hot Springs-Malvern, AR"
+430,430,"Pittsburgh-New Castle-Weirton, PA-OH-WV"
+361,361,"Marinette-Iron Mountain, WI-MI"
+300,300,"Jacksonville-St. Marys-Palatka, FL-GA"
+522,522,"Springfield-Jacksonville-Lincoln, IL"
+540,540,"Tyler-Jacksonville, TX"
+324,324,"Lake Charles-Jennings, LA"
+304,304,"Johnson City-Kingsport-Bristol, TN-VA"
+306,306,"Johnstown-Somerset, PA"
+308,308,"Jonesboro-Paragould, AR"
+309,309,"Joplin-Miami, MO-OK"
+313,313,"Kennewick-Richland-Walla Walla, WA"
+370,370,"Miami-Port St. Lucie-Fort Lauderdale, FL"
+315,315,"Knoxville-Morristown-Sevierville, TN"
+316,316,"Kokomo-Peru, IN"
+318,318,"Lafayette-Opelousas-Morgan City, LA"
+332,332,"Las Vegas-Henderson, NV"
+400,400,"Nashville-Davidson--Murfreesboro, TN"
+352,352,"Lubbock-Plainview-Levelland, TX"
+438,438,"Portland-Lewiston-South Portland, ME"
+340,340,"Little Rock-North Little Rock, AR"
+558,558,"Williamsport-Lock Haven, PA"
+348,348,"Los Angeles-Long Beach, CA"
+356,356,"Macon-Bibb County--Warner Robins, GA"
+359,359,"Mankato-New Ulm, MN"
+425,425,"Parkersburg-Marietta-Vienna, WV-OH"
+362,362,"Martin-Union City, TN"
+364,364,"Mayagüez-San Germán, PR"
+424,424,"Paducah-Mayfield, KY-IL"
+365,365,"McAllen-Edinburg, TX"
+488,488,"San Jose-San Francisco-Oakland, CA"
+372,372,"Midland-Odessa, TX"
+508,508,"Shreveport-Bossier City-Minden, LA"
+384,384,"Monroe-Ruston, LA"
+404,404,"New Bern-Morehead City, NC"
+446,446,"Pullman-Moscow, WA-ID"
+393,393,"Moses Lake-Othello, WA"
+536,536,"Tucson-Nogales, AZ"
+416,416,"Oklahoma City-Shawnee, OK"
+429,429,"Phoenix-Mesa, AZ"
+484,484,"San Antonio-New Braunfels-Pearsall, TX"
+544,544,"Victoria-Port Lavaca, TX"
+452,452,"Rapid City-Spearfish, SD"
+454,454,"Redding-Red Bluff, CA"
+468,468,"Rocky Mount-Wilson-Roanoke Rapids, NC"
+472,472,"Sacramento-Roseville, CA"
+566,566,"Youngstown-Warren, OH-PA"
+517,517,"Spencer-Spirit Lake, IA"
+554,554,"Wausau-Stevens Point-Wisconsin Rapids, WI"
+556,556,"Wichita-Winfield, KS"
