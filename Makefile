@@ -43,14 +43,15 @@ createdb: clean
 	# cleanup build directory
 	rm -rf build;
 	mkdir -p build;
-	touch build/makedb.sql;
 
 	# load all DDLs into one SQL file, in order of foreign constraint dependencies
-	cat sql/date/staging-ddl.sql >> build/makedb.sql;
-	cat sql/census_tiger/staging-ddl.sql >> build/makedb.sql;
-	cat sql/census_hhp/staging-ddl.sql >> build/makedb.sql;
-	cat sql/census_demographics/staging-ddl.sql >> build/makedb.sql;
-	cat sql/jhu_covid19/staging-ddl.sql >> build/makedb.sql;
+	cat\
+		sql/date/staging-ddl.sql\
+		sql/census_tiger/staging-ddl.sql\
+		sql/census_hhp/staging-ddl.sql\
+		sql/census_demographics/staging-ddl.sql\
+		sql/jhu_covid19/staging-ddl.sql\
+		> build/makedb.sql;
 
 	# run SQL file
 	mysql\
@@ -102,14 +103,15 @@ importcloudsql:
 	# cleanup build directory
 	rm -rf build;
 	mkdir -p build;
-	touch build/importcloud.sql;
 
 	# load all DMLs into one SQL File, in order of foreign constraint dependencies
-	cat sql/date/staging-dml.sql >> build/importcloud.sql;
-	cat sql/census_tiger/staging-dml.sql >> build/importcloud.sql;
-	cat sql/census_hhp/staging-dml.sql >> build/importcloud.sql;
-	cat sql/census_demographics/staging-dml.sql >> build/importcloud.sql;
-	cat sql/jhu_covid19/staging-dml.sql >> build/importcloud.sql;
+	cat\
+		sql/date/staging-dml.sql\
+		sql/census_tiger/staging-dml.sql\
+		sql/census_hhp/staging-dml.sql\
+		sql/census_demographics/staging-dml.sql\
+		sql/jhu_covid19/staging-dml.sql\
+		> build/importcloud.sql;
 
 	mysql\
 		--host="${MYSQL_HOST}"\
@@ -125,17 +127,19 @@ createdw: clean
 	# clean up build directory
 	rm -rf build;
 	mkdir -p build;
-	touch build/makedw.sql;
 
 	# load all DDLs into one SQL file, in order of foreign constraint dependencies
-	cat sql/date/dw-ddl.sql >> build/makedw.sql;
-	cat sql/census_tiger/dw-ddl.sql >> build/makedw.sql;
-	cat sql/census_hhp/dw-ddl.sql >> build/makedw.sql;
-	cat sql/census_demographics/dw-ddl.sql >> build/makedw.sql;
-	cat sql/jhu_covid19/dw-ddl.sql >> build/makedw.sql;
+	cat\
+		sql/date/dw-ddl.sql\
+		sql/census_tiger/dw-ddl.sql\
+		sql/census_hhp/dw-ddl.sql\
+		sql/census_demographics/dw-ddl.sql\
+		sql/jhu_covid19/dw-ddl.sql\
+		> build/makedw.sql;
 
 	# run SQL file
-	mysql --host="${MYSQL_HOST}"\
+	mysql\
+		--host="${MYSQL_HOST}"\
 		--user="${MYSQL_USER}"\
 		--password="${MYSQL_PASSWORD}"\
 		-D covid\
@@ -148,17 +152,19 @@ loaddw: clean
 	# cleanup build directory
 	rm -rf build;
 	mkdir -p build;
-	touch build/etldw.sql;
 
 	# load all DMLs into one SQL File, in order of foreign constraint dependencies
-	cat sql/date/dw-dml.sql >> build/etldw.sql;
-	cat sql/census_tiger/dw-dml.sql >> build/etldw.sql;
-	cat sql/census_hhp/dw-dml.sql >> build/etldw.sql;
-	cat sql/census_demographics/dw-dml.sql >> build/etldw.sql;
-	cat sql/jhu_covid19/dw-dml.sql >> build/etldw.sql;
+	cat\
+		sql/date/dw-dml.sql\
+		sql/census_tiger/dw-dml.sql\
+		sql/census_hhp/dw-dml.sql\
+		sql/census_demographics/dw-dml.sql\
+		sql/jhu_covid19/dw-dml.sql\
+		> build/etldw.sql;
 
 	# run SQL file
-	mysql --host="${MYSQL_HOST}"\
+	mysql\
+		--host="${MYSQL_HOST}"\
 		--user="${MYSQL_USER}"\
 		--password="${MYSQL_PASSWORD}"\
 		-D covid\
