@@ -1,0 +1,42 @@
+id,name,Description
+10,SOLE MILITARY ACTION,Base establishment by state forces; remote violence involving state military with no reported casualties; non-violent military operations
+11,MILITARY VERSUS MILITARY,Military in-fighting; battles between a military and mutinous forces; arrests of military officials
+12,MILITARY VERSUS REBELS,Civil war violence between state forces and a rebel actor
+13,MILITARY VERSUS POLITICAL MILITIA,Violence between state forces and unidentified armed groups; violence between police and political party militias
+14,MILITARY VERSUS COMMUNAL MILITIA,Military engagement with a communal militia
+15,MILITARY VERSUS RIOTERS,Suppression of a demonstration by police or military
+16,MILITARY VERSUS PROTESTERS,Suppression of a demonstration by police or military
+17,MILITARY VERSUS CIVILIANS,State repression of civilians; arrests by police
+18,MILITARY VERSUS OTHER,Inter-state conflict; state engagement with private security forces or a UN operation; strategic developments between a regime and the UN or another external actor
+20,SOLE REBEL ACTION,Base establishment; remote violence involving rebel groups with no reported target; accidental detonation by a rebel group
+22,REBELS VERSUS REBELS,Rebel in-fighting; violence between rebel groups and their splinter movements
+23,REBELS VERSUS POLITICAL MILIITA,Civil war violence between rebels and a pro-government militia; violence between rebels and unidentified armed groups
+24,REBELS VERSUS COMMUNAL MILITIA,Violence between rebels and local security providers
+25,REBELS VERSUS RIOTERS,Spontaneous violence against a rebel group; a violent demonstration engaging a rebel group
+26,REBELS VERSUS PROTESTERS,Violence against protesters by rebels
+27,REBELS VERSUS CIVILIANS,Rebel targeting of civilians [a strategy commonly used in civil war]
+28,REBELS VERSUS OTHERS,Civil war violence between rebels and an allied state military; rebel violence against a UN operation
+30,SOLE POLITICAL MILITIA ACTION,Remote violence by an unidentified armed group with no reported target; accidental detonation by a political militia; strategic arson as intimidation by a political party
+33,POLITICAL MILITIA VERSUS POLITICAL MILITIA,Inter-elite violence
+34,POLITICAL MILITIA VERSUS COMMUNAL MILITIA,Violence between communal militia and an unidentified armed group; violence between political militia and local security providers
+35,POLITICAL MILITIA VERSUS RIOTERS,Violent demonstration against a political party; spontaneous violence against a political party
+36,POLITICAL MILITIA VERSUS PROTESTERS,Peaceful demonstration engaging a political party
+37,POLITICAL MILITIA VERSUS CIVILIANS,Out-sourced state repression carried out by pro-government militias; civilian targeting by political militias or unidentified armed groups
+38,POLITICAL MILITIA VERSUS OTHERS,Violence between private security forces and unidentified armed groups; violence between pro-government militia and external state military forces
+40,SOLE COMMUNAL MILITIA ACTION,Destruction of property by a communal militia; establishment of a local security militia
+44,COMMUNAL MILITIA VERSUS COMMUNAL MILITIA,Intercommunal violence
+45,COMMUNAL MILITIA VERSUS RIOTERS,Violent demonstration against an identity militia; spontaneous violence against an identity militia
+46,COMMUNAL MILITIA VERSUS PROTESTERS,Peaceful demonstration engaging an identity militia
+47,COMMUNAL MILITIA VERSUS CIVILIANS,Civilian targeting especially in the context of intercommunal violence
+48,COMMUNAL MILITIA VERSUS OTHER,External state military engaging in violence against a communal militia
+50,SOLE RIOTER ACTION,1-sided violent demonstration; spontaneous arson
+55,RIOTERS VERSUS RIOTERS,2-sided violent demonstration in which both sides engage in violence
+56,RIOTERS VERSUS PROTESTERS,2-sided demonstration in which only 1 side engages in violence
+57,RIOTERS VERSUS CIVILIANS,Violent demonstration in which civilians are injured/killed; spontaneous violence in which civilians are targeted by a mob
+58,RIOTERS VERSUS OTHERS,Mob violence against regional or international operation
+60,SOLE PROTESTER ACTION,1-sided peaceful protest
+66,PROTESTERS VERSUS PROTESTERS,2-sided peaceful protest
+67,PROTESTERS VERSUS CIVILIANS,Peaceful protesters engaging civilians
+68,PROTESTERS VERSUS OTHER,Peaceful demonstration engaging private security forces
+78,OTHER ACTOR VERSUS CIVILIANS,Regional or international operation targeting civilians; private security forces targeting civilians
+80,SOLE OTHER ACTION,Strategic developments involving international or regional operations; remote violence by external military forces with no reported target; non-violent external military operations

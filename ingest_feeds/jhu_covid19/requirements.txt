@@ -1,4 +1,0 @@
-gcsfs
-pandas
-python-dotenv
-requests

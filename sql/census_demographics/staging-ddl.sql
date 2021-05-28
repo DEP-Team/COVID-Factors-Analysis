@@ -100,7 +100,10 @@ CREATE TABLE IF NOT EXISTS `covid`.`county_demographics` (
 	`pct_hh_inc_lessthan_75000` float NULL DEFAULT NULL,
 	`pct_hh_inc_75000_99999` float NULL DEFAULT NULL,
 	PRIMARY KEY (`county_id`),
-	INDEX `county_demographics_county_id_idx` (`county_id`)
+	INDEX `county_demographics_county_id_idx` (`county_id`),
+	CONSTRAINT `county_demographics_county_id_fk`
+		FOREIGN KEY (`county_id`)
+		REFERENCES `county` (`county_id`)
 )
 ENGINE InnoDB
 DEFAULT CHARACTER SET utf8mb4;

@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `msa` (
 CREATE TABLE IF NOT EXISTS `county_msa` (
 	`county_id` VARCHAR(5) NOT NULL,
 	`msa_id` INT NOT NULL,
-	`csa_id` INT NOT NULL,
+	`csa_id` INT NULL,
     `centrality` VARCHAR(10) NOT NULL,
     PRIMARY KEY (`county_id`, `msa_id`),
     INDEX `county_msa_county_pk_idx` (`county_id`, `msa_id`),

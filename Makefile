@@ -62,7 +62,7 @@ createdb: clean
 		< build/makedb.sql;
 
 	# cleanup
-	rm -rf build;
+	#rm -rf build;
 
 importdb:
 	# create date table first

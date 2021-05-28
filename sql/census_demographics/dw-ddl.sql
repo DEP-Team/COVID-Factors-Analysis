@@ -106,7 +106,10 @@ CREATE TABLE IF NOT EXISTS `county_demographics` (
 	UNIQUE KEY (`county_id`),
 	INDEX `county_demographic_county_demographic_key_idx` (`county_demographic_key`),
 	INDEX `county_demographics_county_key_idx` (`county_key`),
-	INDEX `county_demographics_county_id_idx` (`county_id`)
+	INDEX `county_demographics_county_id_idx` (`county_id`),
+	CONSTRAINT `f_county_demographics_county_key_fk`
+		FOREIGN KEY (`county_key`)
+		REFERENCES `dim_county` (`county_key`)
 )
 ENGINE InnoDB
 ;
