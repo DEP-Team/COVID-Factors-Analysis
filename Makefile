@@ -51,6 +51,7 @@ createdb: clean
 		sql/census_hhp/staging-ddl.sql\
 		sql/census_demographics/staging-ddl.sql\
 		sql/jhu_covid19/staging-ddl.sql\
+		sql/acled/staging-ddl.sql\
 		> build/makedb.sql;
 
 	# run SQL file
@@ -97,7 +98,13 @@ importdb:
 		data/import/region.csv\
 		data/import/survey.csv\
 		data/import/survey_response.csv\
-		data/import/county_cases.csv;
+		data/import/county_cases.csv\
+		data/import/actor_type.csv\
+		data/import/event_type.csv\
+		data/import/interaction.csv\
+		data/import/actor.csv\
+		data/import/acled_event.csv\
+		data/import/event_actor.csv;
 
 importcloudsql:
 	# cleanup build directory
@@ -111,6 +118,7 @@ importcloudsql:
 		sql/census_hhp/staging-dml.sql\
 		sql/census_demographics/staging-dml.sql\
 		sql/jhu_covid19/staging-dml.sql\
+		sql/acled/staging-dml.sql\
 		> build/importcloud.sql;
 
 	mysql\
@@ -135,6 +143,7 @@ createdw: clean
 		sql/census_hhp/dw-ddl.sql\
 		sql/census_demographics/dw-ddl.sql\
 		sql/jhu_covid19/dw-ddl.sql\
+		sql/acled/dw-ddl.sql\
 		> build/makedw.sql;
 
 	# run SQL file
@@ -160,6 +169,7 @@ loaddw: clean
 		sql/census_hhp/dw-dml.sql\
 		sql/census_demographics/dw-dml.sql\
 		sql/jhu_covid19/dw-dml.sql\
+		sql/acled/dw-dml.sql\
 		> build/etldw.sql;
 
 	# run SQL file
@@ -172,3 +182,39 @@ loaddw: clean
 
 	# cleanup
 	rm -rf build;
+
+acled:
+	# cleanup build directory
+	rm -rf build;
+	mkdir -p build;
+
+	# load all DDLs into one SQL file, in order of foreign constraint dependencies
+	cat\
+		sql/acled/staging-ddl.sql\
+		> build/makedb.sql;
+
+	# run SQL file
+	mysql\
+		--host="${MYSQL_HOST}"\
+		--user="${MYSQL_USER}"\
+		--password="${MYSQL_PASSWORD}"\
+		-D covid\
+		< build/makedb.sql;
+
+	# import all CSVs - in order of foreign constraint dependencies
+	mysqlimport\
+		--host="${MYSQL_HOST}"\
+		--user="${MYSQL_USER}"\
+		--password="${MYSQL_PASSWORD}"\
+		--local\
+		--ignore-lines 1\
+		--lines-terminated-by "\n"\
+		--fields-terminated-by ","\
+		--fields-optionally-enclosed-by '"'\
+		covid\
+		data/import/actor_type.csv\
+		data/import/event_type.csv\
+		data/import/interaction.csv\
+		data/import/actor.csv\
+		data/import/acled_event.csv\
+		data/import/event_actor.csv;

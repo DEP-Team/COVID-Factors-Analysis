@@ -55,7 +55,6 @@ import geopandas as gpd
 import pandas as pd
 import requests
 from dotenv import load_dotenv
-from sqlalchemy import create_engine
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
@@ -81,7 +80,7 @@ def fetch_entity(ss: str, entity: str, year=2019, rr="20m"):
     return gpd.read_file(filepath)
 
 
-def load_states(engine):
+def load_states():
     states = (
         fetch_entity("us", "state")
             .sort_values("STATEFP")
@@ -97,6 +96,8 @@ def load_states(engine):
                 "AWATER": "water_area"
             })
     )
+    states[["state_id", "geometry"]].to_file("data/import/state.geojson", driver="GeoJSON")
+
     states = states[[
         "state_id",
         "name",
@@ -107,15 +108,10 @@ def load_states(engine):
         "land_area",
         "water_area"
     ]]
-    
-    #with engine.begin() as conn:
-    #    states.to_sql("state", con=conn, if_exists="append", index=False)
-
-    # create CSV for posterity
     states.to_csv("data/import/state.csv", index=False)
 
 
-def load_counties(engine):
+def load_counties():
     counties = (
         fetch_entity("us", "county")
             .sort_values("COUNTYFP")
@@ -131,6 +127,8 @@ def load_counties(engine):
                 "AWATER": "water_area",
         })
     )
+    counties[["county_id", "geometry"]].to_file("data/import/county.geojson", driver="GeoJSON")
+
     counties = counties[[
         "county_id",
         "name",
@@ -141,14 +139,10 @@ def load_counties(engine):
         "land_area",
         "water_area",
     ]]
-
-    #with engine.begin() as conn:
-    #    counties.to_sql("county", con=conn, if_exists="append", index=False)
-
     counties.to_csv("data/import/county.csv", index=False)
 
 
-def load_msas(engine):
+def load_msas():
     """
     CSA map: https://www2.census.gov/geo/maps/metroarea/us_wall/Mar2020/CSA_WallMap_Mar2020.pdf
     :param engine:
@@ -217,11 +211,6 @@ def load_msas(engine):
         "centrality",
     ]]
 
-    #with engine.begin() as conn:
-    #    msa_df.to_sql("msa", con=conn, if_exists="append", index=False)
-    #    csa_df.to_sql("csa", con=conn, if_exists="append", index=False)
-    #    county_msa_df.to_sql("county_msa", con=conn, if_exists="append", index=False)
-
     msa_df.to_csv("data/import/msa.csv", index=False, na_rep="NULL")
     csa_df.to_csv("data/import/csa.csv", index=False, na_rep="NULL")
     county_msa_df.to_csv("data/import/county_msa.csv", index=False, na_rep="NULL")
@@ -239,13 +228,12 @@ def main(event, context):
     logging.info(f"Cloud Function was triggered on {current_time}")
 
     # message
-    #message_decoded = b64decode(event["data"].encode("ascii")).decode("ascii")
-    #message = json.loads(message_decoded) if message_decoded else {}
+    message_decoded = b64decode(event["data"].encode("ascii")).decode("ascii")
+    message = json.loads(message_decoded) if message_decoded else {}
 
-    engine = create_engine(os.getenv("DATABASE_URI"))
-    load_states(engine)
-    load_counties(engine)
-    load_msas(engine)
+    load_states()
+    load_counties()
+    load_msas()
 
 
 if __name__ == "__main__":

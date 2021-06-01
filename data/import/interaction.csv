@@ -1,4 +1,4 @@
-id,name,Description
+interaction_id,name,description
 10,SOLE MILITARY ACTION,Base establishment by state forces; remote violence involving state military with no reported casualties; non-violent military operations
 11,MILITARY VERSUS MILITARY,Military in-fighting; battles between a military and mutinous forces; arrests of military officials
 12,MILITARY VERSUS REBELS,Civil war violence between state forces and a rebel actor
@@ -38,5 +38,7 @@ id,name,Description
 66,PROTESTERS VERSUS PROTESTERS,2-sided peaceful protest
 67,PROTESTERS VERSUS CIVILIANS,Peaceful protesters engaging civilians
 68,PROTESTERS VERSUS OTHER,Peaceful demonstration engaging private security forces
+70,SOLE OTHER ACTOR ACTION,
+77,OTHER ACTOR VERSUS OTHER ACTORS,
 78,OTHER ACTOR VERSUS CIVILIANS,Regional or international operation targeting civilians; private security forces targeting civilians
 80,SOLE OTHER ACTION,Strategic developments involving international or regional operations; remote violence by external military forces with no reported target; non-violent external military operations

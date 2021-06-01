@@ -1,0 +1,18 @@
+event_type_id,event_type,sub_event_type,event_type_slug,general_type
+1,Protests,Peaceful protest,peacefulprotest,Demonstrations
+2,Protests,Protest with intervention,protestwithintervention,Demonstrations
+3,Riots,Violent demonstration,violentdemonstration,Demonstrations
+4,Strategic developments,Other,other,Non-violent actions
+5,Violence against civilians,Attack,attack,Violent events
+6,Strategic developments,Change to group/activity,changetogroupactivity,Non-violent actions
+7,Strategic developments,Looting/property destruction,lootingpropertydestruction,Non-violent actions
+8,Protests,Excessive force against protesters,excessiveforceagainstprotesters,Demonstrations
+9,Explosions/Remote violence,Suicide bomb,suicidebomb,Violent events
+10,Riots,Mob violence,mobviolence,Demonstrations
+11,Strategic developments,Arrests,arrests,Non-violent actions
+12,Explosions/Remote violence,Remote explosive/landmine/IED,remoteexplosivelandmineied,Violent events
+13,Battles,Armed clash,armedclash,Violent events
+14,Strategic developments,Disrupted weapons use,disruptedweaponsuse,Non-violent actions
+15,Violence against civilians,Sexual violence,sexualviolence,Violent events
+16,Strategic developments,Non-violent transfer of territory,nonviolenttransferofterritory,Non-violent actions
+17,Explosions/Remote violence,Grenade,grenade,Violent events
