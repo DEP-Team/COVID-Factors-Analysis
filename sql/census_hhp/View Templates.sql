@@ -14,8 +14,8 @@ AND state_survey_response.response_key = dim_response.response_key;
 #State detail template (excl. 'intent')
 CREATE VIEW State_detail_template AS
 SELECT * FROM covid_dw.State_Overview
-WHERE name = 'Alabama'
-AND week_label = 22
+#WHERE name = 'Alabama'
+#AND week_label = 22
 ORDER BY type_label, choice DESC;
 
 #View - Total respondents summary
