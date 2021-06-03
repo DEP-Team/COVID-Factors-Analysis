@@ -56,6 +56,8 @@ CREATE TABLE IF NOT EXISTS acled_event (
 	armed_presence TINYINT NOT NULL DEFAULT 0,
 	counter_protest TINYINT NOT NULL DEFAULT 0,
 	location VARCHAR(100) NULL,
+	latitude FLOAT NULL,
+	longitude FLOAT NULL,
 	geo_precision TINYINT NOT NULL DEFAULT 0,
 	time_precision TINYINT NOT NULL DEFAULT 0,
 	source VARCHAR(255) NULL,

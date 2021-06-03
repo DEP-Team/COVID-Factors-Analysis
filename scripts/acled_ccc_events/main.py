@@ -163,6 +163,8 @@ def load_acled():
 
         # datasource metadata
         "location",
+        "latitude",
+        "longitude",
         "geo_precision",
         "time_precision",
         "source",
@@ -201,6 +203,8 @@ def load_ccc(engine):
     gdf["size_scale"] = gdf["size_cat"].fillna(0)
     gdf["notes"] = gdf["misc"]
     gdf["armed_presence"] = np.nan
+    gdf["latitude"] = gdf["lat"]
+    gdf["longitude"] = gdf["lon"]
 
     event_groups = gdf.groupby("event_id")["valence"].nunique().rename("group_count").reset_index()
     gdf = pd.merge(gdf, event_groups, on="event_id")
@@ -235,6 +239,8 @@ def load_ccc(engine):
         "counter_protest",
 
         "location_detail",
+        "latitude",
+        "longitude",
         "macroevent",
 
         "arrests",
@@ -272,6 +278,8 @@ def load_ccc(engine):
         "notes",
         "counter_protest",
         "location_detail",
+        "latitude",
+        "longitude",
         "macroevent",
         "arrests",
         "arrests_any",
