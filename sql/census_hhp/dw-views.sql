@@ -40,14 +40,14 @@ WHERE State_vaccination_counts.week_label = State_total_respondents_summary.week
 AND State_vaccination_counts.name = State_total_respondents_summary.name;
 
 #View - State cases 
-CREATE VIEW State_cases_summary AS
+CREATE VIEW IF NOT EXISTS State_cases_summary AS
 SELECT state_cases_daily.state_key, state_cases_daily.date_key, dim_date.date, dim_state.name, state_cases_daily.cases_new, state_cases_daily.cases_total
 FROM state_cases_daily, dim_date, dim_state
 WHERE state_cases_daily.date_key = dim_date.date_key
 AND state_cases_daily.state_key = dim_state.state_key;
 
 #View - Not Vaccinated by Reason 
-CREATE VIEW Not_vaccinated_by_reason AS
+CREATE VIEW IF NOT EXISTS Not_vaccinated_by_reason AS
 SELECT state_survey_response.state_survey_response_key, state_survey_response.respondents_count, dim_survey.survey_key, dim_date.date, dim_state.name, dim_response.choice, dim_characteristic.label AS char_label, dim_characteristic_type.label AS type_label
 FROM state_survey_response, dim_survey, dim_date, dim_state, dim_response, dim_characteristic, dim_characteristic_type
 WHERE state_survey_response.survey_key = dim_survey.survey_key
