@@ -104,7 +104,14 @@ importdb:
 		data/import/interaction.csv\
 		data/import/actor.csv\
 		data/import/acled_event.csv\
-		data/import/event_actor.csv;
+		data/import/event_actor.csv\
+		data/import/issue.csv\
+		data/import/protest_type.csv\
+		data/import/ccc_actor.csv\
+		data/import/ccc_event.csv\
+		data/import/ccc_event_actor.csv\
+		data/import/ccc_event_issue.csv\
+		data/import/ccc_event_protest_type.csv;
 
 importcloudsql:
 	# cleanup build directory
@@ -151,7 +158,7 @@ createdw: clean
 		--host="${MYSQL_HOST}"\
 		--user="${MYSQL_USER}"\
 		--password="${MYSQL_PASSWORD}"\
-		-D covid\
+		-D covid_dw\
 		 < build/makedw.sql;
 
  	# cleanup
@@ -183,38 +190,32 @@ loaddw: clean
 	# cleanup
 	rm -rf build;
 
-acled:
-	# cleanup build directory
-	rm -rf build;
-	mkdir -p build;
-
-	# load all DDLs into one SQL file, in order of foreign constraint dependencies
-	cat\
-		sql/acled/staging-ddl.sql\
-		> build/makedb.sql;
-
+add_acled:
 	# run SQL file
 	mysql\
 		--host="${MYSQL_HOST}"\
 		--user="${MYSQL_USER}"\
 		--password="${MYSQL_PASSWORD}"\
 		-D covid\
-		< build/makedb.sql;
+		< sql/acled/staging-ddl.sql\
 
-	# import all CSVs - in order of foreign constraint dependencies
-	mysqlimport\
+	mysql\
 		--host="${MYSQL_HOST}"\
 		--user="${MYSQL_USER}"\
 		--password="${MYSQL_PASSWORD}"\
-		--local\
-		--ignore-lines 1\
-		--lines-terminated-by "\n"\
-		--fields-terminated-by ","\
-		--fields-optionally-enclosed-by '"'\
-		covid\
-		data/import/actor_type.csv\
-		data/import/event_type.csv\
-		data/import/interaction.csv\
-		data/import/actor.csv\
-		data/import/acled_event.csv\
-		data/import/event_actor.csv;
+		-D covid\
+		< sql/acled/staging-dml.sql
+
+	mysql\
+		--host="${MYSQL_HOST}"\
+		--user="${MYSQL_USER}"\
+		--password="${MYSQL_PASSWORD}"\
+		-D covid_dw\
+		< sql/acled/dw-ddl.sql
+
+	mysql\
+		--host="${MYSQL_HOST}"\
+		--user="${MYSQL_USER}"\
+		--password="${MYSQL_PASSWORD}"\
+		-D covid_dw\
+		< sql/acled/dw-dml.sql

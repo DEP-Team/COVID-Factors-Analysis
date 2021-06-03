@@ -1,0 +1,860 @@
+actor_id,actor_name,actor_slug
+284,general protestors,generalprotestors
+842,Women's March,womensmarch
+279,protestor,generalprotesters
+425,March for Truth,marchfortruth
+24,AFL-CIO,aflcio
+535,Our Revolution,ourrevolution
+200,Democratic Unity Opposition Coalition,democraticunityoppositioncoalition
+167,community members,communitymembers
+692,Students,students
+559,PETA,peta
+717,teachers,teachers
+745,The Poor People's Campaign,thepoorpeoplescampaign
+237,Families Belong Together,familiesbelongtogether
+155,coalition of organizations,coalitionoforganizations
+792,Unite for Justice,uniteforjustice
+633,Rise for Climate,riseforclimate
+171,community protestors,communityprotestors
+236,families,families
+820,Voting Rights Alliance,votingrightsalliance
+422,March for Our Lives,marchforourlives
+435,medical professionals,medicalprofessionals
+738,The National Constitutional Coalition of Patriotic Americans,thenationalconstitutionalcoalitionofpatrioticamericans
+452,Moms Demand Action,momsdemandaction
+697,Students Demand Action,studentsdemandaction
+464,MoveOn,moveon
+685,Stop the Money Pipeline Coalition,stopthemoneypipelinecoalition
+808,Veterans,veterans
+61,Back the Blue,backtheblue
+197,Democratic Party,democraticparty
+638,Roy Moore Campaign,roymoorecampaign
+287,general public,generalpublic
+14,ACLU,aclu
+135,Charlottesville community members and delegates,charlottesvillecommunitymembersanddelegates
+225,environmental activists,environmentalactivists
+68,Beyond the Women's March,beyondthewomensmarch
+314,high school students,highschoolstudents
+29,Alabama Rally Against Injustice,alabamarallyagainstinjustice
+180,counter-protesters,counterprotesters
+30,Alabama Students Against Prisons,alabamastudentsagainstprisons
+837,Women for America First,womenforamericafirst
+161,Communications Workers of America,communicationsworkersofamerica
+723,Teamsters Local 25,teamsterslocal25
+573,Poor People's Campaign,poorpeoplescampaign
+786,United Mine Workers of America,unitedmineworkersofamerica
+166,community leaders,communityleaders
+547,pastors,pastors
+188,CWA,cwa
+52,APWU,apwu
+539,parents,parents
+221,elected officials,electedofficials
+181,counter-protestors,counterprotestors
+469,NAACP,naacp
+78,Black Lives Matter,blacklivesmatter
+585,Project Say Something,projectsaysomething
+599,Reclaiming Our Time,reclaimingourtime
+397,local Republicans,localrepublicans
+566,Planned Parenthood,plannedparenthood
+240,family,family
+251,firefighters,firefighters
+234,Faith in Action,faithinaction
+725,teenagers,teenagers
+545,Party for Socialism and Liberation,partyforsocialismandliberation
+248,Fight for $15,fightfor15
+289,general supporters,generalsupporters
+277,General Protest,generalprotest
+736,The Frontline,thefrontline
+849,workers,workers
+667,Sierra Club,sierraclub
+696,students and teachers,studentsandteachers
+706,Sunrise Movement,sunrisemovement
+338,Indivisible,indivisible
+727,tenants,tenants
+244,farmers,farmers
+107,boogaloo bois,boogaloobois
+235,faith leaders,faithleaders
+98,Black Student Union,blackstudentunion
+362,Jewish Voices for Peace,jewishvoicesforpeace
+623,Resist Marxism,resistmarxism
+549,Patriot Movement AZ,patriotmovementaz
+576,postal workers and supporters,postalworkersandsupporters
+424,March for Science,marchforscience
+476,National Organization for Women,nationalorganizationforwomen
+156,Code Pink,codepink
+475,National Nurses United,nationalnursesunited
+829,White Coats for Black Lives,whitecoatsforblacklives
+300,graduate students,graduatestudents
+510,nurses,nurses
+337,Indigenous Peoples March,indigenouspeoplesmarch
+269,Fridays for Future,fridaysforfuture
+544,parents;students,parentsstudents
+763,Trump supporters,trumpsupporters
+356,inmates,inmates
+204,detainees,detainees
+258,former employees,formeremployees
+691,student protestors,studentprotestors
+13,Academics United,academicsunited
+418,March 4 Trump,march4trump
+774,UltraViolet,ultraviolet
+589,Protesters,protesters
+201,democrats,democrats
+16,Act For America,actforamerica
+246,fast-food workers,fastfoodworkers
+102,Black women,blackwomen
+848,Womens March Youth,womensmarchyouth
+209,Direct Action Everywhere,directactioneverywhere
+600,Red for Ed,redfored
+423,March for Our Rights,marchforourrights
+634,Rise Up for Roe Tour,riseupforroetour
+761,Trump administration,trumpadministration
+211,Donald Trump Jr.,donaldtrumpjr
+298,GOP campaign,gopcampaign
+758,T�ruah,truah
+65,Bend the Arc,bendthearc
+365,J Street,jstreet
+739,the National Council of Jewish Women,thenationalcouncilofjewishwomen
+394,local organizations,localorganizations
+404,Lyft drivers,lyftdrivers
+396,local protestors,localprotestors
+762,Trump campaign,trumpcampaign
+760,truckers,truckers
+570,police,police
+686,Stop the Steal,stopthesteal
+521,One Fair Wage,onefairwage
+828,We the People,wethepeople
+477,National Socialist Movement,nationalsocialistmovement
+148,clergy,clergy
+358,Israeli-American Council,israeliamericancouncil
+590,Proud Boys,proudboys
+618,Republican Party,republicanparty
+383,League of United Latin American Citizens,leagueofunitedlatinamericancitizens
+649,SEIU,seiu
+114,By Any Means Necessary,byanymeansnecessary
+857,YWCA,ywca
+514,Oath Keepers,oathkeepers
+533,others,others
+220,educators,educators
+335,immigrants,immigrants
+597,Rally4Trains,rally4trains
+50,Anti-Police Terror Project,antipoliceterrorproject
+550,Patriot Prayer,patriotprayer
+49,antifa,antifa
+159,College Students,collegestudents
+427,Marshawn Lynch,marshawnlynch
+518,OFA,ofa
+520,Olivier Vernon,oliviervernon
+158,College Republicans,collegerepublicans
+772,UC Union Workers,ucunionworkers
+780,union workers,unionworkers
+603,Refuse Fascism,refusefascism
+664,sex workers,sexworkers
+771,UC Berkeley Students,ucberkeleystudents
+797,University Professional and Technical Employees,universityprofessionalandtechnicalemployees
+369,Kaiser Permanente workers,kaiserpermanenteworkers
+119,California Nurses Association,californianursesassociation
+695,students and parents,studentsandparents
+659,SEIU United Service Workers West,seiuunitedserviceworkerswest
+783,United Automobile Workers,unitedautomobileworkers
+113,business owners,businessowners
+312,healthcare workers,healthcareworkers
+655,SEIU Local 1021,seiulocal1021
+62,BAMN,bamn
+391,Lights for Liberty,lightsforliberty
+621,Resistance SF,resistancesf
+219,East Bay Democratic Socialists of America,eastbaydemocraticsocialistsofamerica
+250,Fight for the Future,fightforthefuture
+605,Refuse Fascism Bay Area,refusefascismbayarea
+405,Lynn United for Change,lynnunitedforchange
+474,National Lawyers Guild,nationallawyersguild
+64,Bay Resistance,bayresistance
+541,parents and students,parentsandstudents
+389,Let Them Play California,letthemplaycalifornia
+778,Union,union
+693,students and community members,studentsandcommunitymembers
+121,Cancel the Rents,canceltherents
+502,No Justice Under Capitalism,nojusticeundercapitalism
+164,Communities United for Restorative Youth Justice,communitiesunitedforrestorativeyouthjustice
+318,home care workers,homecareworkers
+511,nursing home workers,nursinghomeworkers
+212,Do No Harm Coalition,donoharmcoalition
+208,Diablo Rising Tide,diablorisingtide
+658,SEIU United Healthcare Workers West,seiuunitedhealthcareworkerswest
+35,alumni,alumni
+726,teens,teens
+403,Los Brown Berets,losbrownberets
+242,family members,familymembers
+18,activists,activists
+112,business leaders,businessleaders
+811,victims� families,victimsfamilies
+232,faculty,faculty
+333,IfNotNow,ifnotnow
+719,Teachers;Students,teachersstudents
+458,Mothers,mothers
+407,MAGA March,magamarch
+699,Students for a Democratic Society,studentsforademocraticsociety
+134,Centro CSO,centrocso
+380,Latinos for Trump,latinosfortrump
+392,local activists,localactivists
+199,Democratic Socialists of America,democraticsocialistsofamerica
+534,Our Lives on the Line,ourlivesontheline
+794,Unite Here Local 11,uniteherelocal11
+398,local residents,localresidents
+770,Uber and Lyft drivers,uberandlyftdrivers
+679,Staff,staff
+179,Council on American-Islamic Relations,councilonamericanislamicrelations
+741,The People for Bernie Sanders,thepeopleforberniesanders
+257,Foreign affairs ministry employees,foreignaffairsministryemployees
+420,March for Immigrants,marchforimmigrants
+47,ANSWER Coaltion,answercoaltion
+716,Tax March,taxmarch
+288,general ralliers,generalralliers
+443,Mijente,mijente
+859,Zero Hour March,zerohourmarch
+434,McDonald's employees,mcdonaldsemployees
+620,residents,residents
+85,Black Lives Matter LA,blacklivesmatterla
+283,general protestor,generalprotestor
+789,United Teachers Los Angeles,unitedteacherslosangeles
+718,Teachers and strike supporters,teachersandstrikesupporters
+827,Westboro Baptist Church,westborobaptistchurch
+224,Enough is Enough,enoughisenough
+230,Extinction Rebellion,extinctionrebellion
+470,NARAL,naral
+483,Never Again Action,neveragainaction
+285,"general protestors, students",generalprotestorsstudents
+216,dreamers (DACA recipients),dreamersdacarecipients
+26,Airline caterers in UNITE Here,airlinecaterersinunitehere
+46,ANSWER Coalition,answercoalition
+70,Biden campaign,bidencampaign
+317,Holi Against Hindutva chapter,holiagainsthindutvachapter
+223,employees,employees
+120,California Nurses Association/ National Nurses United,californianursesassociationnationalnursesunited
+759,truck drivers,truckdrivers
+320,hospitality workers,hospitalityworkers
+170,community organizers,communityorganizers
+227,essential workers,essentialworkers
+322,hotel workers,hotelworkers
+543,parents of students,parentsofstudents
+153,Coalition for Community Control Over the Police,coalitionforcommunitycontroloverthepolice
+256,football players,footballplayers
+478,National TPS Alliance,nationaltpsalliance
+53,Armenian Americans,armenianamericans
+177,Cops Off Campus,copsoffcampus
+602,Refuse Facism,refusefacism
+54,Armenian Youth Federation,armenianyouthfederation
+379,LA Tenants Union,latenantsunion
+306,Ground Game LA,groundgamela
+27,airport workers,airportworkers
+89,Black Lives Matter protesters,blacklivesmatterprotesters
+142,children,children
+554,People's City Council-Los Angeles,peoplescitycouncillosangeles
+173,concerned citizens,concernedcitizens
+583,Progressive Democrats of America,progressivedemocratsofamerica
+270,friends,friends
+55,Asian American Christian Collaborative,asianamericanchristiancollaborative
+23,advocates,advocates
+305,grocery workers,groceryworkers
+720,Teamsters,teamsters
+708,supporters,supporters
+178,Cops Off Campus Coalition,copsoffcampuscoalition
+856,youth,youth
+538,Palestinian Youth Movement,palestinianyouthmovement
+31,Al-Awda,alawda
+43,American Muslims for Palestine,americanmuslimsforpalestine
+355,Informed Parents of California,informedparentsofcalifornia
+801,U.S. Palestinian Community Network,uspalestiniancommunitynetwork
+361,Jewish Voice for Peace,jewishvoiceforpeace
+700,Students for Justice in Palestine,studentsforjusticeinpalestine
+676,Southern Christian Leadership Conference,southernchristianleadershipconference
+56,Athena,athena
+845,Women's March Kern County,womensmarchkerncounty
+384,League of Women Voters,leagueofwomenvoters
+388,Let Them Play CA,letthemplayca
+690,student athletes,studentathletes
+656,SEIU Local 521,seiulocal521
+353,Indivisible San Diego,indivisiblesandiego
+642,San Diego 350,sandiego350
+551,People for the Ethical Treatment of Animals,peoplefortheethicaltreatmentofanimals
+809,Veterans for Peace,veteransforpeace
+364,Jobs With Justice,jobswithjustice
+793,UNITE HERE,unitehere
+282,general protesting,generalprotesting
+426,Marriott hotel workers,marriotthotelworkers
+819,Vote Common Good,votecommongood
+41,American Friends Service Committee,americanfriendsservicecommittee
+615,religious leaders,religiousleaders
+247,Federal workers,federalworkers
+123,Carmel Valley for Equal Justice,carmelvalleyforequaljustice
+591,Public Defenders for Racial Justice,publicdefendersforracialjustice
+773,Uhuru Solidarity Movement,uhurusolidaritymovement
+751,Three Percenters,threepercenters
+473,National Action Network,nationalactionnetwork
+40,American Federation of Teachers,americanfederationofteachers
+681,StandWithUs,standwithus
+579,prisoners,prisoners
+540,parents and children,parentsandchildren
+128,Catholics,catholics
+663,Service Employees International Union,serviceemployeesinternationalunion
+665,Showing Up for Racial Justice,showingupforracialjustice
+644,Save the Tower,savethetower
+106,Blue Lives Matter,bluelivesmatter
+39,American Federation of Government Employees� National VA Council,americanfederationofgovernmentemployeesnationalvacouncil
+332,Idle No More S F Bay,idlenomoresfbay
+313,HIAS,hias
+451,Moms Clean Air Force,momscleanairforce
+747,The Sierra Club,thesierraclub
+189,cyclists,cyclists
+296,Google employees,googleemployees
+454,Moms Demand Action for Gun Sense in America,momsdemandactionforgunsenseinamerica
+36,Amazon employees,amazonemployees
+812,Vigil for Democracy,vigilfordemocracy
+210,Dominican-Americans,dominicanamericans
+37,Amazon workers,amazonworkers
+286,general protests,generalprotests
+625,restaurant workers,restaurantworkers
+360,janitors,janitors
+596,Rainforest Action Network,rainforestactionnetwork
+122,Care Not Cops,carenotcops
+91,Black Lives Matter Sacramento,blacklivesmattersacramento
+373,kids,kids
+116,CAIR,cair
+662,seniors,seniors
+241,family and friends,familyandfriends
+482,neighbors,neighbors
+601,Red for Fed,redforfed
+731,Tha Hood Squad,thahoodsquad
+709,supporters of President Donald Trump,supportersofpresidentdonaldtrump
+382,Lawmakers,lawmakers
+38,American Federation of Government Employees,americanfederationofgovernmentemployees
+152,coaches,coaches
+165,community activists,communityactivists
+245,Fast Food Employees,fastfoodemployees
+275,general demonstrators,generaldemonstrators
+265,Freedom Road Socialist Organization,freedomroadsocialistorganization
+767,Turning Point USA,turningpointusa
+643,Santa Cruz Indivisible,santacruzindivisible
+466,Movimiento Cosecha,movimientocosecha
+274,general,general
+647,school staff,schoolstaff
+255,Food & Water Watch,foodwaterwatch
+176,Contra Costa County Patriots,contracostacountypatriots
+7,40 Days for Life,40daysforlife
+280,general protesters 0 protest,generalprotesters0protest
+343,Indivisible Durango,indivisibledurango
+455,Montezuma County Patriots,montezumacountypatriots
+42,American Indian Movement,americanindianmovement
+19,ADAPT,adapt
+598,Rally for Our Rights,rallyforourrights
+419,March for Black Women,marchforblackwomen
+72,Bikers for Trump,bikersfortrump
+402,Longmont Leads with Love,longmontleadswithlove
+839,Women for Trump,womenfortrump
+824,Wear Orange,wearorange
+350,Indivisible Mohawk Valley,indivisiblemohawkvalley
+456,Moral Monday CT,moralmondayct
+508,No Tolls CT,notollsct
+174,Connecticut Education Association,connecticuteducationassociation
+321,hospital workers,hospitalworkers
+186,CT 169 Strong,ct169strong
+650,SEIU 1199NE,seiu1199ne
+844,Women's March CT,womensmarchct
+471,NARAL Pro-Choice America,naralprochoiceamerica
+175,Connecticut Immigrant Rights Alliance,connecticutimmigrantrightsalliance
+411,Make the Road CT,maketheroadct
+777,Unidad Latina en Accion,unidadlatinaenaccion
+571,Police officers,policeofficers
+776,Unidad Latina en Acci�n,unidadlatinaenaccin
+76,Black and Brown United in Action,blackandbrownunitedinaction
+577,Power Up Manchester,powerupmanchester
+252,FIRM Action,firmaction
+779,union members,unionmembers
+45,animal rights activists,animalrightsactivists
+619,Republicans,republicans
+4,32BJ SEIU,32bjseiu
+460,Mother's United Against Violence,mothersunitedagainstviolence
+342,Indivisible CT,indivisiblect
+187,CT Students for a Dream,ctstudentsforadream
+238,families of inmates,familiesofinmates
+111,bus drivers,busdrivers
+233,faculty members,facultymembers
+92,Black Lives Matter Seacoast,blacklivesmatterseacoast
+503,NORML,norml
+853,Working Families Party,workingfamiliesparty
+273,Gays Against Guns,gaysagainstguns
+104,Bloodstained Men,bloodstainedmen
+198,Democratic Party rally,democraticpartyrally
+651,SEIU 32BJ,seiu32bj
+815,V Is for Vaccine,visforvaccine
+851,Workers United-Chicago Midwest Regional Joint Board,workersunitedchicagomidwestregionaljointboard
+614,Release Aging People in Prison Campaign,releaseagingpeopleinprisoncampaign
+309,HALTSolitary,haltsolitary
+465,MoveOn.org,moveonorg
+5,350 DC,350dc
+501,No Justice No Pride,nojusticenopride
+325,Housing Works,housingworks
+132,Center for Popular Democracy,centerforpopulardemocracy
+552,People�s Action,peoplesaction
+183,CPD Action,cpdaction
+698,"Students, faculty",studentsfaculty
+835,Women,women
+622,Resist Here,resisthere
+160,Common Cause,commoncause
+530,Organizing for Action,organizingforaction
+790,United We Dream,unitedwedream
+190,DC Jobs with Justice,dcjobswithjustice
+641,Sanctuary DMV,sanctuarydmv
+149,climate activists,climateactivists
+798,university students,universitystudents
+548,Patriot Front,patriotfront
+83,Black Lives Matter DC,blacklivesmatterdc
+749,They/Them Collective,theythemcollective
+278,general protester,generalprotester
+437,Metro DC Democratic Socialists of America,metrodcdemocraticsocialistsofamerica
+463,Movement for Black Lives,movementforblacklives
+401,Long Live Go-Go,longlivegogo
+799,Until Freedom,untilfreedom
+702,Students for Life of America,studentsforlifeofamerica
+740,The Palm Collective,thepalmcollective
+666,#ShutDownDC,shutdowndc
+457,Morning March Seattle,morningmarchseattle
+195,Demand Justice,demandjustice
+372,Kentucky Poor People's Campaign: A National Call for Moral Revival,kentuckypoorpeoplescampaignanationalcallformoralrevival
+673,SOKY Chapter of Kentuckians For The Commonwealth,sokychapterofkentuckiansforthecommonwealth
+567,Planned Parenthood Action Fund,plannedparenthoodactionfund
+677,SPACEs in Action,spacesinaction
+127,CASA in Action,casainaction
+484,New Black Panther Party,newblackpantherparty
+133,Center for Popular Democracy Action,centerforpopulardemocracyaction
+737,The Live Movement,thelivemovement
+683,Stomp Out Slumlords,stompoutslumlords
+231,Extinction Rebellion DC,extinctionrebelliondc
+126,CASA,casa
+2,1199 SEIU,1199seiu
+192,Death Penalty Action,deathpenaltyaction
+336,Indigenous Environmental Network,indigenousenvironmentalnetwork
+753,Total Liberation Collective,totalliberationcollective
+182,Cowboys for Trump,cowboysfortrump
+492,New York Immigration Coalition,newyorkimmigrationcoalition
+421,March for Life,marchforlife
+75,Black Alliance for Peace,blackallianceforpeace
+295,Good Trouble Cooperative,goodtroublecooperative
+191,DC Vote,dcvote
+293,Giniw Collective,giniwcollective
+319,Honor the Earth,honortheearth
+854,Yemeni Liberation Movement,yemeniliberationmovement
+415,Make the Road NY,maketheroadny
+151,#ClosetheCamps,closethecamps
+310,Hands Along the Water,handsalongthewater
+348,Indivisible Lumpkin,indivisiblelumpkin
+301,Graduate Students United,graduatestudentsunited
+855,Young Democratic Socialists of America,youngdemocraticsocialistsofamerica
+215,Dream Defenders,dreamdefenders
+184,Created Equal,createdequal
+712,Take �Em Down Jax,takeemdownjax
+359,Jacksonville Community Action Committee,jacksonvillecommunityactioncommittee
+504,Northside Coalition,northsidecoalition
+575,Postal workers,postalworkers
+399,locals,locals
+315,Hillel,hillel
+217,Earth Action,earthaction
+218,Earth Ethics,earthethics
+562,Physicians for Social Responsibility,physiciansforsocialresponsibility
+25,AFSCME,afscme
+254,Floridians First,floridiansfirst
+822,water protectors,waterprotectors
+529,Organize Florida,organizeflorida
+733,The Bloodstained Men,thebloodstainedmen
+461,motorcyclists,motorcyclists
+101,Black Voters Matter,blackvotersmatter
+48,Answer Suncoast,answersuncoast
+572,police supporters,policesupporters
+63,bar owners,barowners
+71,Bikers,bikers
+713,Tallahassee Community Action Committee,tallahasseecommunityactioncommittee
+714,Tampa Bay Community Action Committee,tampabaycommunityactioncommittee
+678,Spirit of America,spiritofamerica
+574,Pop Up Protest South Florida,popupprotestsouthflorida
+302,Grandparents,grandparents
+105,Bloomberg campaign,bloombergcampaign
+57,Athens Anti-Discrimination Movement,athensantidiscriminationmovement
+130,Center for Bio-Ethical Reform,centerforbioethicalreform
+291,Georgia Alliance for Social Justice,georgiaallianceforsocialjustice
+689,student,student
+604,Refuse Fascism ATL,refusefascismatl
+58,Atlanta Justice Alliance,atlantajusticealliance
+595,Rainbow PUSH Coalition,rainbowpushcoalition
+755,Transformative Justice Coalition,transformativejusticecoalition
+646,school bus drivers,schoolbusdrivers
+795,UNITE HERE Local 5,uniteherelocal5
+607,Refuse Fascism Honolulu,refusefascismhonolulu
+311,Hawaii Workers Center,hawaiiworkerscenter
+703,"students, general protestors",studentsgeneralprotestors
+582,Progressive Action for the Common Good,progressiveactionforthecommongood
+253,First Nation Farmer Climate Unity March,firstnationfarmerclimateunitymarch
+764,Trump Victory,trumpvictory
+202,Des Moines Black Lives Matter,desmoinesblacklivesmatter
+203,Des Moines BLM,desmoinesblm
+826,weDignify,wedignify
+581,Professors,professors
+694,students and faculty,studentsandfaculty
+357,Iowa Freedom Riders,iowafreedomriders
+558,People's Rights,peoplesrights
+80,Black Lives Matter Boise,blacklivesmatterboise
+330,Idaho Liberty Dogs,idaholibertydogs
+331,Idaho on Fire,idahoonfire
+266,Free Idaho,freeidaho
+346,Indivisible Illinois,indivisibleillinois
+138,Chicago Alliance Against Racist and Political Repression,chicagoallianceagainstracistandpoliticalrepression
+115,cab drivers,cabdrivers
+341,Indivisible Chicago,indivisiblechicago
+271,Friends Who MArch,friendswhomarch
+586,Pro-Life Action League,prolifeactionleague
+139,Chicago Community Bond Fund,chicagocommunitybondfund
+674,Sons of Confederate Veterans,sonsofconfederateveterans
+15,ACLU People Power,aclupeoplepower
+532,other organizations,otherorganizations
+606,Refuse Fascism Chicago,refusefascismchicago
+81,Black Lives Matter Chicago;,blacklivesmatterchicago
+743,The People's Lobby,thepeopleslobby
+28,A Just Harvest,ajustharvest
+95,Black Smoke Matters,blacksmokematters
+141,Chicago Teachers Union,chicagoteachersunion
+393,local churches,localchurches
+193,Degenerate Artists Against Fascism,degenerateartistsagainstfascism
+294,Good Kids Mad City,goodkidsmadcity
+752,Tikkun Chai Inter-National,tikkunchaiinternational
+137,Chicago Activist Coalition for Justice,chicagoactivistcoalitionforjustice
+84,Black Lives Matter in Wheeling,blacklivesmatterinwheeling
+334,Illinois Nurses Association,illinoisnursesassociation
+657,SEIU Local 73,seiulocal73
+367,Justice for Black Lives,justiceforblacklives
+140,Chicago Democratic Socialists of America,chicagodemocraticsocialistsofamerica
+262,Freedom First International,freedomfirstinternational
+509,NU Community Not Cops,nucommunitynotcops
+791,United Working Families,unitedworkingfamilies
+505,Northwestern University Community Not Cops,northwesternuniversitycommunitynotcops
+652,SEIU Healthcare Illinois,seiuhealthcareillinois
+734,The Coalition to Stop Genocide in India,thecoalitiontostopgenocideinindia
+22,adults,adults
+635,Rockford Youth Activism,rockfordyouthactivism
+433,May 30th Alliance,may30thalliance
+297,GOP,gop
+162,Communication Workers of America,communicationworkersofamerica
+354,Indy10 Black Lives Matter,indy10blacklivesmatter
+281,"general protesters, students and teachers",generalprotestersstudentsandteachers
+157,College Democrats,collegedemocrats
+371,Kentuckians for the Commonwealth,kentuckiansforthecommonwealth
+524,Operation Save America,operationsaveamerica
+66,Bernie Sanders,berniesanders
+516,Occupy ICE,occupyice
+661,senior citizens,seniorcitizens
+775,unemployed workers,unemployedworkers
+442,Migrant Justice,migrantjustice
+459,Mothers Out Front,mothersoutfront
+564,Pioneer Valley Workers Center,pioneervalleyworkerscenter
+813,Violence In Boston,violenceinboston
+608,Refuse Fascism New England,refusefascismnewengland
+431,Mass Action Against Police Brutality,massactionagainstpolicebrutality
+292,GE workers,geworkers
+147,City Life/Vida Urbana,citylifevidaurbana
+261,Freedom Fighters Coalition,freedomfighterscoalition
+110,Boston Socialist Alternative,bostonsocialistalternative
+430,Massachusetts Peace Action,massachusettspeaceaction
+109,Boston May Day Coalition,bostonmaydaycoalition
+429,Massachusetts Nurses Association,massachusettsnursesassociation
+704,Sugar Shack Alliance,sugarshackalliance
+352,Indivisible Pittsfield,indivisiblepittsfield
+9,50 Miles More,50milesmore
+670,Socialist Alternative,socialistalternative
+453,Moms Demand Action for Gun Sense,momsdemandactionforgunsense
+616,Reopen Maryland,reopenmaryland
+395,local pastors,localpastors
+557,People�s Power Assembly,peoplespowerassembly
+428,Maryland Youth Liberation Front,marylandyouthliberationfront
+825,We Back Blue,webackblue
+260,Frederick United,frederickunited
+410,Mainers for Accountable leadership,mainersforaccountableleadership
+409,Mainers Against Mask Mandates,mainersagainstmaskmandates
+408,Maine People�s Alliance,mainepeoplesalliance
+846,Women's March on Washington Michigan Chapter,womensmarchonwashingtonmichiganchapter
+711,Survivors Speak,survivorsspeak
+299,Graduate Employees Organization,graduateemployeesorganization
+796,University of Michigan Graduate Employees' Organization,universityofmichigangraduateemployeesorganization
+441,Michigan United,michiganunited
+205,Detroit Eviction Defense,detroitevictiondefense
+206,Detroit Will Breathe,detroitwillbreathe
+467,Movimiento Cosecha GR,movimientocosechagr
+440,Michigan Conservative Coalition,michiganconservativecoalition
+788,United Steelworkers,unitedsteelworkers
+479,Native Lives Matter,nativelivesmatter
+450,MN Teen Activists,mnteenactivists
+276,general protesers,generalprotesers
+444,Minnesota Immigrant Rights Action Committee,minnesotaimmigrantrightsactioncommittee
+446,Minnesota Peace Action Coalition,minnesotapeaceactioncoalition
+51,Anti-War Committee,antiwarcommittee
+1,10K Foundation,10kfoundation
+73,Bikers Riding Against Police Brutality,bikersridingagainstpolicebrutality
+768,Twin Cities Coalition For Justice 4 Jamar,twincitiescoalitionforjustice4jamar
+86,Black Lives Matter Minnesota,blacklivesmatterminnesota
+117,CAIR-Minnesota,cairminnesota
+653,SEIU Healthcare Minnesota,seiuhealthcareminnesota
+594,Racial Justice Network,racialjusticenetwork
+163,Communities United Against Police Brutality,communitiesunitedagainstpolicebrutality
+150,Climate Justice Committee,climatejusticecommittee
+239,Families Supporting Families Against Police Violence,familiessupportingfamiliesagainstpoliceviolence
+836,Women Against Military Madness,womenagainstmilitarymadness
+449,MN350,mn350
+522,Onsite Public Media,onsitepublicmedia
+626,Revolutionary Sound,revolutionarysound
+445,Minnesota Interfaith Power & Light,minnesotainterfaithpowerlight
+118,CAIR-MN,cairmn
+316,Hold the Line Minnesota,holdthelineminnesota
+542,parents and teachers,parentsandteachers
+447,Missouri Healthcare for All,missourihealthcareforall
+172, CoMo for Progress,comoforprogress
+448,Missouri Jobs with Justice,missourijobswithjustice
+472,NARAL Pro-Choice Missouri,naralprochoicemissouri
+438,Metropolitan Congregations United,metropolitancongregationsunited
+568,Planned Parenthood Advocates in Missouri,plannedparenthoodadvocatesinmissouri
+229,ExpectUS,expectus
+370,KC Tenants,kctenants
+742,The People's City,thepeoplescity
+624,Resist STL,resiststl
+87,Black Lives Matter Mississippi,blacklivesmattermississippi
+701,Students for Life,studentsforlife
+124,Carolina Circumcision Crisis Protest,carolinacircumcisioncrisisprotest
+617,ReOpen NC,reopennc
+136,Charlotte Uprising,charlotteuprising
+125,Carolina Circumcision Crisis Protests,carolinacircumcisioncrisisprotests
+375,KKK,kkk
+682,Statesville4Change,statesville4change
+765,Tuesdays with Tillis,tuesdayswithtillis
+766,Tuesdays with Toomey,tuesdayswithtoomey
+480,NC BORN,ncborn
+481,NC Raise Up,ncraiseup
+214,Down Home North Carolina,downhomenorthcarolina
+515,Occupy Graham,occupygraham
+841,Women Organizing for Wilmington,womenorganizingforwilmington
+757,Triad Abolition Project,triadabolitionproject
+721,Teamsters Local 120,teamsterslocal120
+705,"Suit Up Nebraska, the Women�s March of Omaha and Indivisible organizations across Nebraska",suitupnebraskathewomensmarchofomahaandindivisibleorganizationsacrossnebraska
+580,proBLAC,problac
+12,Absolute Defiance,absolutedefiance
+806,Vermont Workers' Center,vermontworkerscenter
+831,Wind of the Spirit,windofthespirit
+486,New Labor,newlabor
+485,New Jersey Right to Life,newjerseyrighttolife
+243,Family Policy Alliance of New Jersey,familypolicyallianceofnewjersey
+439,Mexicanos Unidos,mexicanosunidos
+611,Refuse Fascism Philly,refusefascismphilly
+304,Green Party of New Jersey,greenpartyofnewjersey
+414,Make the Road NJ,maketheroadnj
+17,Action Together New Jersey,actiontogethernewjersey
+20,adjunct professors,adjunctprofessors
+838,Women for Progress,womenforprogress
+629,Ridgewood for Black Liberation,ridgewoodforblackliberation
+807,Verona for Black Lives Matter,veronaforblacklivesmatter
+10,Abolish ICE NY-NJ,abolishicenynj
+498,NJ 4 Abolition,nj4abolition
+94,Black Lives Matter Teaneck,blacklivesmatterteaneck
+750,thoughtstream,thoughtstream
+412,Make the Road New Jersey,maketheroadnewjersey
+556,People's Organization for Progress,peoplesorganizationforprogress
+500,NJ Anti War Agenda,njantiwaragenda
+499,NJ Animal Save,njanimalsave
+497,NJ 11th for Change,nj11thforchange
+21,administrators,administrators
+746,The Red Nation,therednation
+487,New Mexico Freedoms Alliance,newmexicofreedomsalliance
+196,Democratic campaign,democraticcampaign
+249,Fight for Nevada,fightfornevada
+390,Let Them Play NV,letthemplaynv
+513,NYRenews,nyrenews
+144,Citizen Action,citizenaction
+587,Protect Orange County,protectorangecounty
+324,Housing Justice For all,housingjusticeforall
+145,Citizen Action of New York,citizenactionofnewyork
+816,Vocal New York,vocalnewyork
+493,New York State Nurses Association,newyorkstatenursesassociation
+817,VOCAL-NY,vocalny
+613,Release Aging People in Prison,releaseagingpeopleinprison
+131,Center for Community Alternatives,centerforcommunityalternatives
+268,Free the People ROC,freethepeopleroc
+34,All of Us,allofus
+222,Empire State Indivisible,empirestateindivisible
+272,Fund Excluded Workers Coalition,fundexcludedworkerscoalition
+33,Alliance for Quality Education,allianceforqualityeducation
+436,Met Council on Housing,metcouncilonhousing
+852,Worker's World Party,workersworldparty
+834,WNY Peace Center,wnypeacecenter
+631,Rise and Resist,riseandresist
+640,Samidoun: Palestinian Prisoner Solidarity Network,samidounpalestinianprisonersolidaritynetwork
+413,Make the Road New York,maketheroadnewyork
+490,New York Communities for Change,newyorkcommunitiesforchange
+818,Voces de la Frontera,vocesdelafrontera
+385,Learn As Protest,learnasprotest
+494,New York Taxi Workers Alliance,newyorktaxiworkersalliance
+512,NY4Palestine,ny4palestine
+671,Socialist Alternative NYC,socialistalternativenyc
+632,Rise and Resist NY,riseandresistny
+630,Ridgewood Tenants Union,ridgewoodtenantsunion
+363,Jews for Racial and Economic Justice,jewsforracialandeconomicjustice
+800,Upper East Side for Black Lives Matter,uppereastsideforblacklivesmatter
+688,Street Riders NYC,streetridersnyc
+687,Strategy for Black Lives,strategyforblacklives
+609,Refuse Fascism NYC,refusefascismnyc
+491,New York Community Action Project,newyorkcommunityactionproject
+821,Warriors in the Garden,warriorsinthegarden
+103,Black Women's March,blackwomensmarch
+11,Abolition Park,abolitionpark
+264,Freedom March NYC,freedommarchnyc
+537,Outlive Them NYC,outlivethemnyc
+782,United Against Racism and Fascism-NYC,unitedagainstracismandfascismnyc
+850,Workers Assembly Against Racism,workersassemblyagainstracism
+381,Laundry Workers Center,laundryworkerscenter
+8,50 Mile Run for Justice Protest,50milerunforjusticeprotest
+366,Justice Center en el Barrio,justicecenterenelbarrio
+495,New York Taxi Workers Association,newyorktaxiworkersassociation
+748,The Stonewall Protests,thestonewallprotests
+722,Teamsters Local 202,teamsterslocal202
+627,Riders4Rights,riders4rights
+637,Rose City Justice,rosecityjustice
+628,Riders for Black Lives,ridersforblacklives
+308,GWC-UAW Local 2110,gwcuawlocal2110
+323,Housing Justice 4 All,housingjustice4all
+553,People's Campaign for Parole Justice,peoplescampaignforparolejustice
+307,GSOC UAW,gsocuaw
+833,Within Our Lifetime,withinourlifetime
+400,Long Island Peaceful Protest,longislandpeacefulprotest
+378,Last Chance for Change,lastchanceforchange
+143,Cincinnati Socialist Alternative,cincinnatisocialistalternative
+684,Stop Ohio Anti-Protest Bills,stopohioantiprotestbills
+610,Refuse Fascism Ohio,refusefascismohio
+82,Black Lives Matter Cleveland,blacklivesmattercleveland
+843,Women's March Cleveland,womensmarchcleveland
+267,Free Ohio Now,freeohionow
+707,Sunrise Movement Cleveland,sunrisemovementcleveland
+555,People's Justice Project,peoplesjusticeproject
+660,Sen. Bernie Sanders,senberniesanders
+823,Wayne County Racial Justice Coalition,waynecountyracialjusticecoalition
+528,Oregon Nurses Association,oregonnursesassociation
+351,Indivisible Oregon,indivisibleoregon
+527,Oregonians United Against Profiling,oregoniansunitedagainstprofiling
+569,PNW Youth Liberation Front,pnwyouthliberationfront
+526,Oregon Federation of Nurses & Health Professionals,oregonfederationofnurseshealthprofessionals
+344,Indivisible Eugene,indivisibleeugene
+100,Black Unity,blackunity
+636,Rose City Antifa,rosecityantifa
+213,Don't Shoot Portland,dontshootportland
+639,Safe PDX,safepdx
+525,Oregon Chinese Coalition,oregonchinesecoalition
+593,Put People First-PA,putpeoplefirstpa
+654,SEIU Healthcare Pennsylvania,seiuhealthcarepennsylvania
+387,Lehigh Valley Friends Meeting,lehighvalleyfriendsmeeting
+386,Lehigh Valley Friends,lehighvalleyfriends
+290,Gene Stilp,genestilp
+675,Southampton Friends Meeting,southamptonfriendsmeeting
+488,Newtown Friends Meeting Peace & Justice Committee,newtownfriendsmeetingpeacejusticecommittee
+489,Newtown Friends Peace & Justice Committee,newtownfriendspeacejusticecommittee
+578,President Trump,presidenttrump
+32,Alliance for Police Accountability,allianceforpoliceaccountability
+259,Fossil Free Pitt,fossilfreepitt
+565,Pittsburgh I Can't Breathe,pittsburghicantbreathe
+756,TransYOUniting,transyouniting
+303,Green Party of Allegheny County,greenpartyofalleghenycounty
+672,Socialist Alternative Pittsburgh,socialistalternativepittsburgh
+710,Survivors Network of those Abused by Priests,survivorsnetworkofthoseabusedbypriests
+194,Delco Resists,delcoresists
+377,Lancaster Stands Up,lancasterstandsup
+3,3/20 Coalition,320coalition
+517,Occupy PHA,occupypha
+561,Philadelphia Housing Action,philadelphiahousingaction
+88,Black Lives Matter Philly,blacklivesmatterphilly
+560,Philadelphia Federation of Teachers,philadelphiafederationofteachers
+462,MOVE,move
+417,Make the Road Pennsylvania,maketheroadpennsylvania
+416,Make the Road PA,maketheroadpa
+90,Black Lives Matter Rhode Island,blacklivesmatterrhodeisland
+349,Indivisible Midlands,indivisiblemidlands
+754,Transformation Project,transformationproject
+728,Tennessee Immigrant and Refugee Rights Coalition,tennesseeimmigrantandrefugeerightscoalition
+830,white nationalists,whitenationalists
+523,Open Carry Texas,opencarrytexas
+531,O'Rourke campaign,orourkecampaign
+59,Austin Justice Coalition,austinjusticecoalition
+668,Silent No More - We Back Our Protectors,silentnomorewebackourprotectors
+584,Project Overwatch,projectoverwatch
+832,Wind Therapy Freedom Riders,windtherapyfreedomriders
+729,Texas Organizing Project,texasorganizingproject
+730,Texas Rising,texasrising
+226,Equality Texas,equalitytexas
+368,Just Texas,justtexas
+784,United Food and Commercial Workers Union,unitedfoodandcommercialworkersunion
+185,Cruz campaign,cruzcampaign
+496,Next Generation Action Network,nextgenerationactionnetwork
+507,Not My Son,notmyson
+345,Indivisible Houston,indivisiblehouston
+328,Houston Youth Climate Strike,houstonyouthclimatestrike
+327,Houston Women March On,houstonwomenmarchon
+787,United My Justice,unitedmyjustice
+108,Border Network for Human Rights,bordernetworkforhumanrights
+326,Houston Socialist Movement,houstonsocialistmovement
+769,TX21Indivisible,tx21indivisible
+803,Utah Parents United,utahparentsunited
+802,Utah Against Police Brutality,utahagainstpolicebrutality
+536,Our Streets,ourstreets
+804,Utah Patriots,utahpatriots
+340,Indivisible Charlottesville,indivisiblecharlottesville
+814,Virginia Organizing,virginiaorganizing
+376,Kroger employees,krogeremployees
+79,Black Lives Matter 757,blacklivesmatter757
+329,IAmTheChangeTODAY,iamthechangetoday
+154,Coalition of Black Americans,coalitionofblackamericans
+339,Indivisible757,indivisible757
+805,Vermont NEA,vermontnea
+732,The Black Perspective,theblackperspective
+6,350 Seattle,350seattle
+588,Protectors of the Salish Sea,protectorsofthesalishsea
+648,Seattle Indivisible,seattleindivisible
+228,Everyday March,everydaymarch
+563,Picket 4 Change Seattle,picket4changeseattle
+77,Black Indigenous Coalition,blackindigenouscoalition
+612,Refuse Fascism Seattle,refusefascismseattle
+374,King County Equity Now,kingcountyequitynow
+810,Veterans for Peace Seattle Chapter 92,veteransforpeaceseattlechapter92
+74,Black Action Coalition,blackactioncoalition
+207,Dexmaamxsgism Da Libaalx,dexmaamxsgismdalibaalx
+785,United for In Person Learning in Clark County,unitedforinpersonlearninginclarkcounty
+781,United Action Oshkosh,unitedactionoshkosh
+506,Northwoods Progressives,northwoodsprogressives
+146,Citizen Action of Wisconsin,citizenactionofwisconsin
+406,Madison Teachers Inc.,madisonteachersinc
+263,Freedom Inc.,freedominc
+99,Black Umbrella Global,blackumbrellaglobal
+546,Party for Socialism and Liberation Milwaukee,partyforsocialismandliberationmilwaukee
+744,The People's Revolution,thepeoplesrevolution
+847,Women's March West Virginia,womensmarchwestvirginia
+840,Women of Color House,womenofcolorhouse
+97,Black Students Refusing Further Inaction,blackstudentsrefusingfurtherinaction
+96,Black Student League,blackstudentleague
+735,The Core Bryn Mawr Strike Collective,thecorebrynmawrstrikecollective
+669,Sisterhood,sisterhood
+60,BACaSO,bacaso
+468,Mujeres,mujeres
+858,Zami,zami
+432,Mawrters for Immigrant Justice,mawrtersforimmigrantjustice
+44,Americans for Democratic Action Iowa,americansfordemocraticactioniowa
+715,Tampa Bay Students for a Democratic Society,tampabaystudentsforademocraticsociety
+680,Stand Up for Social Justice,standupforsocialjustice
+93,Black Lives Matter supporters,blacklivesmattersupporters
+347,Indivisible Long Island,indivisiblelongisland
+169,Community Organized for Solidarity New England,communityorganizedforsolidaritynewengland
+168,Community Organized for Solidarity,communityorganizedforsolidarity
+67,Bethesda African Cemetery Coalition,bethesdaafricancemeterycoalition
+724,Teamsters Local 773,teamsterslocal773
+592,public works employees,publicworksemployees
+69,BG Freedom Walkers,bgfreedomwalkers
+519,oil refinery workers,oilrefineryworkers
+129,Cecil Solidarity,cecilsolidarity
+645,Say Their Names Alabama,saytheirnamesalabama

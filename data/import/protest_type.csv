@@ -1,0 +1,570 @@
+protest_type_id,protest_type_name,protest_type_slug
+229,march,march
+125,demonstration,demonstration
+397,rally,rally
+346,protest,protest
+521,vigil,vigil
+483,strike,strike
+109,counter protest,counterprotest
+545,Walkout,walkout
+525,vigil/rally,vigilrally
+31,banner drop,bannerdrop
+79,car protest,carprotest
+132, die-in,diein
+9,arson,arson
+135,direct action,directaction
+186,gathering,gathering
+195, hike,hike
+492, swim,swim
+116,dance protest,danceprotest
+71,caravan,caravan
+58, boycott,boycott
+66, candidate forum,candidateforum
+252,memorial,memorial
+15,artistic performance,artisticperformance
+311,picket,picket
+331,prayer rally,prayerrally
+359,protest/march,protestmarch
+159,eat-in,eatin
+73,car caravan,carcaravan
+488,stroke,stroke
+47, blockade,blockade
+191,group photo,groupphoto
+449, sit in,sitin
+540,walk,walk
+237,March/Parade,marchparade
+300, parade,parade
+468,speak-out,speakout
+352,protest & blockade,protestblockade
+347,protest0,protest0
+443,silent protest,silentprotest
+343,protes,protes
+111,create protest mural,createprotestmural
+56,body bag rally,bodybagrally
+41,bike ride,bikeride
+402,rallying,rallying
+544,walk in,walkin
+148," ""drive""",drive
+150,drive by,driveby
+7, and livestream,andlivestream
+154,drive-in rally,driveinrally
+340, press conference,pressconference
+370,protests,protests
+429, science fair,sciencefair
+464,solidarity gathering,solidaritygathering
+467,Speaking Event,speakingevent
+308, Petition,petition
+335,prayer vigil,prayervigil
+174,flash art,flashart
+92,church service,churchservice
+193,hanging of banners,hangingofbanners
+201, hunger strike,hungerstrike
+410,raly,raly
+403,rally & march,rallymarch
+342,Prostest,prostest
+221, lock down,lockdown
+286,occupation,occupation
+420, road blockade,roadblockade
+123,demo,demo
+530,virtual march,virtualmarch
+385,Public Forum,publicforum
+275," ""noise rally""",noiserally
+283,nurse-in,nursein
+532,virtual rally,virtualrally
+232,march and rally,marchandrally
+181, fundraiser,fundraiser
+200,human chain,humanchain
+149, drive around,drivearound
+36, bicycle ride,bicycleride
+298,paddleout,paddleout
+491,support walkout,supportwalkout
+355,Protest Event,protestevent
+53, block streets,blockstreets
+248,Meeting,meeting
+128, demonstratoin,demonstratoin
+366,protest parade,protestparade
+519,vandalization,vandalization
+326,prayer circle,prayercircle
+365,protestors,protestors
+127,demonstrations,demonstrations
+129,demonstraton,demonstraton
+124,demonstartion,demonstartion
+376,protest vandalism,protestvandalism
+427, run,run
+522,Vigil and demonstration,vigilanddemonstration
+55,boat rally,boatrally
+210,kayak protest,kayakprotest
+418, riot,riot
+30,banging pots protest,bangingpotsprotest
+82, Casserole Protests (Cacerolazo),casseroleprotestscacerolazo
+54,boat parade,boatparade
+218,lemonade stand,lemonadestand
+358,protest in trees,protestintrees
+20,assault,assault
+23,autonomous action,autonomousaction
+552,warning,warning
+360,protest motorcade,protestmotorcade
+377,protest/vigil,protestvigil
+441,silent march,silentmarch
+108, costume parade,costumeparade
+356,protest hike,protesthike
+284,observance,observance
+106, convoy,convoy
+463, slow roll,slowroll
+217, leafletting,leafletting
+113, dance,dance
+239,march & rally,marchrally
+52,block street,blockstreet
+325, prayer,prayer
+88,chalk walk,chalkwalk
+419, roadblock,roadblock
+196,honk and wave,honkandwave
+480, street chalk,streetchalk
+255, minute of silence,minuteofsilence
+374,protest tailgate,protesttailgate
+351,protest bike ride,protestbikeride
+444,silent vigil,silentvigil
+115,dance performance,danceperformance
+447, sing-out,singout
+542, walk & chalk,walkchalk
+457,skating protest,skatingprotest
+65,camp out,campout
+417,ride out,rideout
+271,musical performance,musicalperformance
+19, art show,artshow
+565,yoga,yoga
+509,truck rally,truckrally
+158,drive-up protest,driveupprotest
+514,unity prayer walk,unityprayerwalk
+34,bicycle protest,bicycleprotest
+559,work out rally,workoutrally
+453,skate,skate
+531,virtual protest,virtualprotest
+156,drive-thru rally,drivethrurally
+80,car rally,carrally
+446, sing-in,singin
+102,community gathering,communitygathering
+155,drive-thru protest,drivethruprotest
+392,rakky,rakky
+151,drive-by demonstration,drivebydemonstration
+455,skate protest,skateprotest
+493,swim out,swimout
+83, celebration,celebration
+567,yoga session,yogasession
+39,bike protest,bikeprotest
+167,exorcism,exorcism
+68,candlelight vigil,candlelightvigil
+28, ballon release,ballonrelease
+1,0.0,00
+246,meditation,meditation
+269,mural painting,muralpainting
+423,roller skating,rollerskating
+422,roller skate,rollerskate
+433,shutdown,shutdown
+451,sit-in protest,sitinprotest
+495, taking a knee,takingaknee
+70,car and bike ride,carandbikeride
+222,logout,logout
+212,kneel-in,kneelin
+93,civil disobedience,civildisobedience
+362,protest on bikes,protestonbikes
+523,vigil in cars,vigilincars
+363,protest on skates,protestonskates
+77,car march,carmarch
+78,car parade,carparade
+62,cacerolazo,cacerolazo
+187,go go rally,gogorally
+175,flashmob,flashmob
+172,festival,festival
+329,prayer march,prayermarch
+238,march/protest,marchprotest
+215, konbit,konbit
+152,drive-by protest,drivebyprotest
+512, turned violent,turnedviolent
+330,prayer protest,prayerprotest
+244, match,match
+177, float out,floatout
+479,street blockade,streetblockade
+46,BLM block party,blmblockparty
+87,chalk protest,chalkprotest
+12,art demonstration,artdemonstration
+203,incident,incident
+476,standout,standout
+394,rallies,rallies
+481,street painting,streetpainting
+461,sleep-out,sleepout
+462,"""sleep-out"" protest",sleepoutprotest
+381,protets,protets
+517, vandalism,vandalism
+499, tear gas used,teargasused
+81, cars and bikes,carsandbikes
+507,truck parade,truckparade
+320, police used force and teargas and pepper spray after 8 PM,policeusedforceandteargasandpeppersprayafter8pm
+49,block highway,blockhighway
+395,rallly,rallly
+25,baby shower,babyshower
+107, cookout,cookout
+344,proteset,proteset
+183,funeral procession,funeralprocession
+364,protestor,protestor
+261,motorcade,motorcade
+219,lie-in,liein
+535, virtual vigil,virtualvigil
+42,billboard/sign blackout,billboardsignblackout
+91,children's march,childrensmarch
+40,bike rally,bikerally
+84,chalk,chalk
+372,protest skate,protestskate
+100,community bill signing,communitybillsigning
+89,chalk writing,chalkwriting
+555,wheatpasting,wheatpasting
+361,protest on bicycles,protestonbicycles
+558, work-out,workout
+208,jail support,jailsupport
+412,remembrance,remembrance
+10,art and sign making,artandsignmaking
+265,motorcycle ride,motorcycleride
+406,rally/protest,rallyprotest
+378,Protest walk,protestwalk
+98,commemoration,commemoration
+353,protestd,protestd
+163, emonstration,emonstration
+409,rally/voters' registration,rallyvotersregistration
+258,mock funeral,mockfuneral
+51,block party,blockparty
+185, gather,gather
+533, virtual strike,virtualstrike
+496,teach-in,teachin
+368,protest rally,protestrally
+505,tractor rally,tractorrally
+382,protetst,protetst
+416,ride,ride
+136, direct action march,directactionmarch
+454,skateboard protest,skateboardprotest
+131,Demostration,demostration
+323,praise and worship gathering,praiseandworshipgathering
+190,graffiti protest,graffitiprotest
+254,memorial service,memorialservice
+459, sleep-in,sleepin
+383,protext,protext
+110, counter-rally,counterrally
+290,online rally,onlinerally
+297, overnight sit-in,overnightsitin
+119, dancing,dancing
+285,observation,observation
+373,protest soccer,protestsoccer
+367,protest / photo-op,protestphotoop
+162,educational gathering,educationalgathering
+43,birthday celebration,birthdaycelebration
+18,art protest,artprotest
+333, prayer service,prayerservice
+64,campaign event,campaignevent
+101,community event,communityevent
+264,motorcycle rally,motorcyclerally
+281,nonviolent occupation,nonviolentoccupation
+520,vehicle rally,vehiclerally
+26,bailout,bailout
+164,encampment,encampment
+400,rally and prayer service,rallyandprayerservice
+224, looting,looting
+310, petition signing,petitionsigning
+529,virtual gathering,virtualgathering
+85, chalk art,chalkart
+231, march and forum,marchandforum
+348,Protest and march,protestandmarch
+262,motorcycle brigade,motorcyclebrigade
+194, hanging of effigy,hangingofeffigy
+72,caravan protest,caravanprotest
+539,voter registration & protest,voterregistrationprotest
+280,non-violent direct action training,nonviolentdirectactiontraining
+130, demonstrator,demonstrator
+6, and car caravan,andcarcaravan
+139, discussion with police,discussionwithpolice
+173,flag burning,flagburning
+2,2.0,20
+456,skate rally,skaterally
+176,flash rally,flashrally
+543,Walk for Solidarity,walkforsolidarity
+8,armed protest,armedprotest
+240,march/vigil,marchvigil
+465,solidarity rally,solidarityrally
+513,unity march,unitymarch
+569,Zumba rally,zumbarally
+304,peace walk,peacewalk
+153,drive-by rally,drivebyrally
+29, balloon release,balloonrelease
+24,auto rally,autorally
+188,golf cart caravan,golfcartcaravan
+260, moment of silence,momentofsilence
+328, prayer gathering,prayergathering
+336,prayer walk,prayerwalk
+126,demonstration/march,demonstrationmarch
+75,car caravans,carcaravans
+379,protest: walkout,protestwalkout
+354,protested,protested
+288,on-campus strike and march,oncampusstrikeandmarch
+484,Strike and Demonstration,strikeanddemonstration
+251,Meetup,meetup
+560,work stoppage,workstoppage
+548,walkout/rally,walkoutrally
+21,assembly,assembly
+547,walkout/march,walkoutmarch
+147,dress code protest,dresscodeprotest
+211,kindness march,kindnessmarch
+94,civil protest,civilprotest
+223,Lol,lol
+470, speeches,speeches
+138, discussions,discussions
+161,Educational Fair,educationalfair
+228, marcg,marcg
+22,A student-led walkout is being organized.,astudentledwalkoutisbeingorganized
+345,protesst,protesst
+485,Strike and meet up to demonstrate,strikeandmeetuptodemonstrate
+551,walkut,walkut
+230,March and demonstration,marchanddemonstration
+59,boycott classes,boycottclasses
+120,day of dialogue and reflection,dayofdialogueandreflection
+431,"""send out"" day",sendoutday
+287,on-campus discussion,oncampusdiscussion
+428,School Walkout,schoolwalkout
+207,It's kind of a combination NVDA and strike. It's a trash pickup/strike with signs demanding declaration of a climate emergency,itskindofacombinationnvdaandstrikeitsatrashpickupstrikewithsignsdemandingdeclarationofaclimateemergency
+268, multi-school protest,multischoolprotest
+316,planned activities,plannedactivities
+204, informational meeting,informationalmeeting
+434,sickout,sickout
+295,other,other
+4, against violence,againstviolence
+95,Cleaning Up,cleaningup
+97,climate strike,climatestrike
+387,public nudity,publicnudity
+556,wildcat strike,wildcatstrike
+498,teach-out,teachout
+563,work-to-rule protest,worktoruleprotest
+266,motor march,motormarch
+157,drive-up demonstration,driveupdemonstration
+324,prally,prally
+180, forum,forum
+160, educational event,educationalevent
+145, door-knocking,doorknocking
+309, petition drive,petitiondrive
+16,artistic protest,artisticprotest
+445,silent walk,silentwalk
+220, literacy event,literacyevent
+226,m,m
+541,walk and ride,walkandride
+432,shoe strike,shoestrike
+319, plant potting,plantpotting
+182,funeral,funeral
+86,chalk painting,chalkpainting
+48,blockade & march,blockademarch
+104,community walk,communitywalk
+307,performance art rally,performanceartrally
+236,march out,marchout
+415,reverse town hall,reversetownhall
+257,mock execution,mockexecution
+413, rent strike,rentstrike
+503, tractorcade,tractorcade
+67,Candlelight and prayer vigil,candlelightandprayervigil
+289,online protest,onlineprotest
+510, tuition strike,tuitionstrike
+312,picketing,picketing
+313, picket line,picketline
+205,informational picket,informationalpicket
+178,flotilla,flotilla
+421, road rally,roadrally
+140,disobedience,disobedience
+279,Nonviolent blockade,nonviolentblockade
+5,aircraft flyover,aircraftflyover
+508,truck protest,truckprotest
+396,rallt,rallt
+337,pray-in,prayin
+169,faith walk,faithwalk
+253,memorial ceremony,memorialceremony
+538,voter drive,voterdrive
+38, bike caravan,bikecaravan
+399,Rally and march,rallyandmarch
+561, work strike,workstrike
+436, sidewalk chalk,sidewalkchalk
+466,solidarity ride,solidarityride
+334, prayer session,prayersession
+294,open mic protest,openmicprotest
+404,rally on wheels,rallyonwheels
+301,parents,parents
+197, horse ride,horseride
+214,kneeling protest,kneelingprotest
+249,meetings,meetings
+471, speech interruption,speechinterruption
+430,self-immolation protest,selfimmolationprotest
+380,protet,protet
+274,news conference,newsconference
+553,wearing hood while shopping,wearinghoodwhileshopping
+478,stike,stike
+557,window rally,windowrally
+502,town hall,townhall
+537, votercade,votercade
+494,swim protest,swimprotest
+96,cleanup,cleanup
+14, art installation,artinstallation
+339,preotest,preotest
+341,procession,procession
+273,negotiaiton,negotiaiton
+371,protest (sit-in),protestsitin
+554,wearing swastika masks,wearingswastikamasks
+299,paddle protest,paddleprotest
+245,meal strike,mealstrike
+143,disturbance,disturbance
+426,ruckus,ruckus
+407,rally/protests,rallyprotests
+142,disrupt the die-in,disruptthediein
+472, spiritual movement,spiritualmovement
+267,move in,movein
+276,noise show,noiseshow
+439,sign making,signmaking
+33,BBQ protest,bbqprotest
+350,protest art,protestart
+13, art festival,artfestival
+424,roll out,rollout
+442,silent meditative protest,silentmeditativeprotest
+549,walkouts,walkouts
+526, vigils,vigils
+546,Walkout and Rally,walkoutandrally
+166, eviction defense,evictiondefense
+32,BBQ,bbq
+518,vandalism (hate crime?),vandalismhatecrime
+61,bus rally,busrally
+206,Interfaith Vigil,interfaithvigil
+234,march/dance,marchdance
+369,protest resignation,protestresignation
+17, art projection,artprojection
+489,superhero rally,superherorally
+57, body bags,bodybags
+171, fast,fast
+117,dance protest performance,danceprotestperformance
+389, race,race
+437,sidewalk chalk party,sidewalkchalkparty
+90,chant,chant
+63,call to action,calltoaction
+305, performance,performance
+263,motorcycle protest,motorcycleprotest
+209,kayaction,kayaction
+536,virtual walkout,virtualwalkout
+486,strike & demonstration,strikedemonstration
+511, turn backs to speaker,turnbackstospeaker
+3,5K race,5krace
+213, kneeling during nat'l anthem,kneelingduringnatlanthem
+501,this event is all of the above,thiseventisalloftheabove
+35,bicycle rally,bicyclerally
+405,rally & opposition,rallyopposition
+199,human blockade,humanblockade
+198,human barricade,humanbarricade
+144,divestment,divestment
+477,stay-at-home protest,stayathomeprotest
+184, gala,gala
+398,Rally and drive by Mar-a-Lago,rallyanddrivebymaralago
+170, fake funeral procession,fakefuneralprocession
+550,walkout: sit-in,walkoutsitin
+103,community picnic,communitypicnic
+76,car demonstration,cardemonstration
+384,psalm sing,psalmsing
+243,mass mooning,massmooning
+469, speech,speech
+435,sidewalk art,sidewalkart
+60,bus caravan,buscaravan
+408,rally then march,rallythenmarch
+233,march and vigil,marchandvigil
+566,yoga protest,yogaprotest
+414, resignation,resignation
+474,stand-in,standin
+568, Zoom webinar,zoomwebinar
+487,Strike/Walk out,strikewalkout
+112,crime walk,crimewalk
+137,discussion,discussion
+500, then sit-in,thensitin
+69, car and bike caravan,carandbikecaravan
+242, mass meeting,massmeeting
+192, haircuts,haircuts
+292,open-carry march,opencarrymarch
+504,tractor parade,tractorparade
+303, peace march,peacemarch
+50, block interactions and light rail stop,blockinteractionsandlightrailstop
+388,public rally,publicrally
+141,disruption,disruption
+241, mass,mass
+189,grade-strike,gradestrike
+179,flyering,flyering
+216,"""kookout""",kookout
+327,prayer demonstration,prayerdemonstration
+357,protesting,protesting
+473,spoke,spoke
+390, railroad blockade,railroadblockade
+528,violin demonstration,violindemonstration
+270,musical demonstration,musicaldemonstration
+401,rally and vigil,rallyandvigil
+321,political vandalism,politicalvandalism
+438, signature collection,signaturecollection
+114,dance party,danceparty
+277,Non-march,nonmarch
+202, iftar,iftar
+393,rall,rall
+386,public meeting,publicmeeting
+452,sit in/rally,sitinrally
+146, drag show,dragshow
+306,performance art,performanceart
+74,car caravan protest,carcaravanprotest
+44,blackade,blackade
+278,non-partisan rally,nonpartisanrally
+338,pray protest,prayprotest
+516,uprising,uprising
+272,naked bike ride,nakedbikeride
+282,nude rally,nuderally
+227,marach,marach
+314,picket lines,picketlines
+11, art build,artbuild
+296,outdoor meeting,outdoormeeting
+259,mock funeral procession,mockfuneralprocession
+458, skits,skits
+490,support rally,supportrally
+564,worship protest,worshipprotest
+225,lunch,lunch
+349,protest (armed),protestarmed
+133, die-in/death train,dieindeathtrain
+105, concert,concert
+375,protest/takeover,protesttakeover
+332,"prayer ""revival""",prayerrevival
+118,dance rally,dancerally
+291,open-carry hike,opencarryhike
+497, teach-in demonstration,teachindemonstration
+450,sit-in demonstration,sitindemonstration
+293, open forum,openforum
+411, relay,relay
+27,bake sale,bakesale
+527,vigil (shabbat),vigilshabbat
+322, port shutdown,portshutdown
+482,street theater,streettheater
+37, bike brigade,bikebrigade
+235,march/festival,marchfestival
+121, day of silence,dayofsilence
+391, railway blockade,railwayblockade
+122,delay tactics,delaytactics
+440, sign wave,signwave
+45, blackout,blackout
+475,standoff,standoff
+562, work to rule,worktorule
+99,commemorative service,commemorativeservice
+168, fair,fair
+524,Vigil/March,vigilmarch
+460,sleeping dragon protest,sleepingdragonprotest
+134,dinner,dinner
+165, event,event
+534,virtual teach-in,virtualteachin
+315, picnic,picnic
+506, tresspassing,tresspassing
+247,meet and greet,meetandgreet
+448,sit-down protest,sitdownprotest
+318, planting,planting
+515,unity rally,unityrally
+250,meeting with City Commissioner,meetingwithcitycommissioner
+317,planned rally,plannedrally
+302,Park-in,parkin
+256,"""mock crowded classroom demonstration""",mockcrowdedclassroomdemonstration
+425,ruck march,ruckmarch

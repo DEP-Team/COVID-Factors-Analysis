@@ -1,0 +1,6 @@
+geopandas
+pandas
+pygeos
+python-dotenv
+requests
+rtree
