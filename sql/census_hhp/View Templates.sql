@@ -26,6 +26,7 @@ CREATE VIEW State_Overview AS
             AND dim_characteristic.characteristic_type_key = dim_characteristic_type.characteristic_type_key
             AND state_survey_response.response_key = dim_response.response_key;
 
+#State detail template (excl. 'intent')
 CREATE VIEW State_detail_template AS
     SELECT 
         *
@@ -33,6 +34,7 @@ CREATE VIEW State_detail_template AS
         covid_dw.State_Overview
     ORDER BY type_label , choice DESC;
 
+#View - Total respondents summary
 CREATE VIEW State_total_respondents_summary AS
     SELECT 
         week_label, name, SUM(respondents_count) AS sum_of_resp
@@ -42,6 +44,7 @@ CREATE VIEW State_total_respondents_summary AS
         type_label = 'Age Group'
     GROUP BY week_label , name;
 
+#View - State vaccination counts summary
 CREATE VIEW State_vaccination_counts AS
     SELECT 
         week_label,
@@ -54,6 +57,7 @@ CREATE VIEW State_vaccination_counts AS
         type_label = 'Age Group'
     GROUP BY week_label , name , choice , type_label;
 
+#View - State vaccination rates
 CREATE VIEW State_vaccination_rates AS
     SELECT 
         State_vaccination_counts.week_label,
@@ -68,6 +72,7 @@ CREATE VIEW State_vaccination_rates AS
         State_vaccination_counts.week_label = State_total_respondents_summary.week_label
             AND State_vaccination_counts.name = State_total_respondents_summary.name;
 
+#View - State cases 
 CREATE VIEW State_cases_summary AS
     SELECT 
         state_cases_daily.state_key,
@@ -84,6 +89,7 @@ CREATE VIEW State_cases_summary AS
         state_cases_daily.date_key = dim_date.date_key
             AND state_cases_daily.state_key = dim_state.state_key;
 
+#View - Not Vaccinated by Reason 
 CREATE VIEW Not_vaccinated_by_reason AS
     SELECT 
         state_survey_response.state_survey_response_key,
