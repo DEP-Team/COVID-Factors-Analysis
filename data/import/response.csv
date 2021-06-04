@@ -1,12 +1,11 @@
 response_id,question_id,choice,subchoice
-1,1,Yes,
-2,1,No,
-3,1,Did not report,
-4,1,Yes,Received or plan to receive all required doses
-5,1,Yes,Have not received/do not plan to receive all required doses
-6,1,Yes,Did not report
-7,1,No,Will definitely get a vaccine
-8,1,No,Will probably get a vaccine
-9,1,No,Will probably not get a vaccine
-10,1,No,Will definitely not get a vaccine
-11,1,No,Did not report
+1,1,Yes,Received or plan to receive all required doses
+2,1,Yes,Have not received/do not plan to receive all required doses
+3,1,Yes,Did not report
+4,1,No,Will definitely get a vaccine
+5,1,No,Will probably get a vaccine
+6,1,No,Unsure about getting a vaccine
+7,1,No,Will probably not get a vaccine
+8,1,No,Will definitely not get a vaccine
+9,1,No,Did not report
+10,1,Did not report,Did not report

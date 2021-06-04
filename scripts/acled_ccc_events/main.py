@@ -181,7 +181,7 @@ def create_uuid(id: str, salt: str):
     return str(uuid.UUID(msg.hexdigest()))
 
 
-def load_ccc(engine):
+def load_ccc():
     ccc_df = pd.read_csv("data/raw/ccc_compiled.csv", parse_dates=["date"])
     ccc_df = ccc_df[~ccc_df["date"].isna()]
     ccc_df = ccc_df[~ccc_df["type"].isna()]
@@ -395,3 +395,4 @@ def load_ccc(engine):
 
 if __name__ == "__main__":
     load_acled()
+    load_ccc()

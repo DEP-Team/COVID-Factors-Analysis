@@ -1,36 +1,36 @@
-issue_id,issue_name,issue_slug
-35,women's rights,womensrights
-31,science,science
-15,executive,executive
-1,,
-24,migration,migration
-18,healthcare,healthcare
-33,taxes,taxes
-19,housing,housing
-30,reproductive rights,reproductiverights
-12,education,education
-20,judiciary,judiciary
-32,sexual violence,sexualviolence
-21,labor,labor
-13,energy,energy
-14,environment,environment
-16,foreign affairs,foreignaffairs
-25,military,military
-7,democracy,democracy
-27,policing,policing
-22,legislative,legislative
-8,development,development
-6,criminal justice,criminaljustice
-3,civil rights,civilrights
-23,lgbtq rights,lgbtqrights
-26,native peoples' rights,nativepeoplesrights
-34,transportation,transportation
-28,racism,racism
-29,religion,religion
-17,guns,guns
-5,covid,covid
-2,animal rights,animalrights
-11,economy,economy
-4,corruption,corruption
-9,disabled rights,disabledrights
-10,drugs,drugs
+issue_id,issue_name
+35,women's rights
+31,science
+15,executive
+1,
+24,migration
+18,healthcare
+33,taxes
+19,housing
+30,reproductive rights
+12,education
+20,judiciary
+32,sexual violence
+21,labor
+13,energy
+14,environment
+16,foreign affairs
+25,military
+7,democracy
+27,policing
+22,legislative
+8,development
+6,criminal justice
+3,civil rights
+23,lgbtq rights
+26,native peoples' rights
+34,transportation
+28,racism
+29,religion
+17,guns
+5,covid
+2,animal rights
+11,economy
+4,corruption
+9,disabled rights
+10,drugs
