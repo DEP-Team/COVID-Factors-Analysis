@@ -219,3 +219,12 @@ add_acled:
 		--password="${MYSQL_PASSWORD}"\
 		-D covid_dw\
 		< sql/acled/dw-dml.sql
+
+
+change2:
+	mysql\
+		--host="${MYSQL_HOST}"\
+		--user="${MYSQL_USER}"\
+		--password="${MYSQL_PASSWORD}"\
+		-D covid\
+		< tempsql.sql;

@@ -167,17 +167,27 @@ CREATE TABLE IF NOT EXISTS event_x_protest_type (
 		REFERENCES dim_protest_type (protest_type_key)
 );
 
+CREATE TABLE IF NOT EXISTS capitol_seige_arrests (
+	county_key INT,
+	arrests INT,
+	PRIMARY KEY (county_key),
+	INDEX capitol_seige_arrests_county_key_idx (county_key),
+	CONSTRAINT capitol_seige_arrests_county_key_fk
+		FOREIGN KEY (county_key)
+		REFERENCES dim_county (county_key)
+);
+
 CREATE VIEW v_date_lag AS
 SELECT
 	date_key,
 	date,
-	DATE_FORMAT(DATE_ADD(date, INTERVAL 7 DAY), "%Y%m%d") AS lag_1wk_date_key,
-    DATE_FORMAT(DATE_ADD(date, INTERVAL 14 DAY), "%Y%m%d") lag_2wk_date_key,
-    DATE_FORMAT(DATE_ADD(date, INTERVAL 21 DAY), "%Y%m%d") lag_3wk_date_key,
-    DATE_FORMAT(DATE_ADD(date, INTERVAL 28 DAY), "%Y%m%d") lag_4wk_date_key,
-    DATE_FORMAT(DATE_ADD(date, INTERVAL 35 DAY), "%Y%m%d") lag_5wk_date_key,
-    DATE_FORMAT(DATE_ADD(date, INTERVAL 42 DAY), "%Y%m%d") lag_6wk_date_key,
-    DATE_FORMAT(DATE_ADD(date, INTERVAL 49 DAY), "%Y%m%d") lag_7wk_date_key,
-    DATE_FORMAT(DATE_ADD(date, INTERVAL 56 DAY), "%Y%m%d") lag_8wk_date_key
+	CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 7 DAY), "%Y%m%d") AS UNSIGNED) AS lag_1wk_date_key,
+    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 14 DAY), "%Y%m%d") AS UNSIGNED) lag_2wk_date_key,
+    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 21 DAY), "%Y%m%d") AS UNSIGNED) lag_3wk_date_key,
+    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 28 DAY), "%Y%m%d") AS UNSIGNED) lag_4wk_date_key,
+    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 35 DAY), "%Y%m%d") AS UNSIGNED) lag_5wk_date_key,
+    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 42 DAY), "%Y%m%d") AS UNSIGNED) lag_6wk_date_key,
+    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 49 DAY), "%Y%m%d") AS UNSIGNED) lag_7wk_date_key,
+    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 56 DAY), "%Y%m%d") AS UNSIGNED) lag_8wk_date_key
 FROM dim_date
 ;

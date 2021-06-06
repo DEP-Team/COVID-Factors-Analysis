@@ -235,3 +235,9 @@ CREATE TABLE IF NOT EXISTS ccc_event_protest_type (
 		FOREIGN KEY (protest_type_id)
 		REFERENCES protest_type (protest_type_id)
 );
+
+CREATE TABLE IF NOT EXISTS capitol_seige_arrests (
+	county_fips VARCHAR(5),
+	arrests INT,
+	PRIMARY KEY (county_fips)
+);

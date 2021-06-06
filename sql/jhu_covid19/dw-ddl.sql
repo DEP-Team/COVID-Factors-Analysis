@@ -120,3 +120,34 @@ CREATE TABLE IF NOT EXISTS `msa_cases_daily` (
 -- @TODO: state_cases_weekly (view)
 -- @TODO: msa_cases_daily (view)
 
+CREATE VIEW v_excess_case_rate AS
+SELECT
+	cd1.county_key,
+	c.state_key,
+    cd1.date_key,
+	v_date_lead.date,
+    cd1.case_rate_per_100k AS county_case_rate_per_100k,
+    sd1.case_rate_per_100k AS state_case_rate_per_100k,
+	cd1.case_rate_per_100k - sd1.case_rate_per_100k AS county_excess_cases,
+    wk4_date,
+    cd2.case_rate_per_100k AS county_case_rate_per_100k_after_4wk,
+    sd2.case_rate_per_100k AS state_case_rate_per_100k_after_4wk,
+	cd2.case_rate_per_100k - sd2.case_rate_per_100k AS county_excess_cases_after_4wk,
+    (cd2.case_rate_per_100k - cd1.case_rate_per_100k) AS county_case_rate_delta,
+    (sd2.case_rate_per_100k - sd1.case_rate_per_100k) AS state_case_rate_delta,
+    ((cd2.case_rate_per_100k - sd2.case_rate_per_100k) - (cd1.case_rate_per_100k - sd1.case_rate_per_100k)) AS county_excess_case_rate_delta
+FROM county_cases_daily AS cd1
+JOIN v_date_lead
+	USING (date_key)
+JOIN county_cases_daily AS cd2
+	ON cd2.date_key = CAST(DATE_FORMAT(v_date_lead.wk4_date, "%Y%m%d") AS UNSIGNED)
+    AND cd1.county_key = cd2.county_key
+JOIN dim_county AS c
+	ON c.county_key = cd1.county_key
+JOIN state_cases_daily AS sd1
+	ON sd1.date_key = cd1.date_key
+	AND sd1.state_key = c.state_key
+JOIN state_cases_daily AS sd2
+	ON sd2.date_key = CAST(DATE_FORMAT(v_date_lead.wk4_date, "%Y%m%d") AS UNSIGNED)
+    AND sd1.state_key = sd2.state_key
+;

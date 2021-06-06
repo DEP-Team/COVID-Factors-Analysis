@@ -285,3 +285,15 @@ INSERT INTO event_x_protest_type (
 	JOIN covid_dw.fact_event ON fact_event.ccc_event_id = ccc_event_protest_type.event_id
 	JOIN covid_dw.dim_protest_type ON dim_protest_type.protest_type_key = ccc_event_protest_type.protest_type_id
 ;
+
+INSERT INTO capitol_seige_arrests (
+	county_key,
+    arrests
+)
+	SELECT
+        county_key,
+        arrests
+	FROM covid.capitol_seige_arrests
+	JOIN dim_county
+		ON dim_county.county_id = capitol_seige_arrests.county_fips
+;
