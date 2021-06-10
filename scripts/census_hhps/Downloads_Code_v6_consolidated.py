@@ -56,5 +56,3 @@ Consolidated_Template.to_csv(r'C:/Users/Fetouh/Desktop/Rami_Temp/Data_Engineerin
 # Update survey number (individual)
 # Update characteristic_id / response_id columns - adjustments came later in the process
 # Replace "-" and "" with "0"
-
-print('complete')
