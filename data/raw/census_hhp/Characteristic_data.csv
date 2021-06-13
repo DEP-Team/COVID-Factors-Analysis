@@ -1,0 +1,54 @@
+Characteristic_id,Characteristic_text
+1,18 - 24
+2,25 - 39
+3,40 - 54
+4,55 - 64
+5,65 and above
+6,Male
+7,Female
+8,Hispanic or Latino - may be of any race
+9,White alone not Hispanic
+10,Black alone not Hispanic
+11,Asian alone not Hispanic
+12,Two or more races + Other races not Hispanic
+13,Less than high school
+14,High school or GED
+15,Some college-associate’s degree
+16,Bachelor’s degree or higher
+17,Married
+18,Widowed
+19,Divorced-separated
+20,Never married
+21,Did not report
+22,Less than $25000
+23,$25000 - $34999
+24,$35000 - $49999
+25,$50000 - $74999
+26,$75000 - $99999
+27,$100000 - $149999
+28,$150000 - $199999
+29,$200000 and above
+30,Did not report
+31,Yes
+32,No
+33,Not sure
+34,Did not report
+35,Concerned about possible side effects
+36,Don’t know if a vaccine will work
+37,Don’t like vaccines
+38,Doctor has not recommended it
+39,Plan to wait and see if it is safe
+40,Other people need it more right now
+41,Concerned about the cost
+42,Don’t trust COVID-19 vaccines
+43,Don’t trust the government
+44,Don’t believe I need a vaccine
+45,Already had COVID-19
+46,Not a member of a high-risk group
+47,Plan to use masks or other precautions instead
+48,Don’t believe COVID-19 is a serious illness
+49,Don’t think vaccines are beneficial
+50,Other not believing they need vaccine
+51,Did not report to reasons for not believing they needed a vaccine
+52,Other reason for not receiving or planning to receive vaccine
+53,Did not report to reason for not receiving or planning to receive vaccine
