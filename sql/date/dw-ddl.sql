@@ -32,3 +32,13 @@ CREATE TABLE IF NOT EXISTS `dim_date` (
 	INDEX `date_date_key_idx` (`date_key`),
 	INDEX `date_date_idx` (`date`)
 );
+
+CREATE VIEW v_date_lead AS
+SELECT
+	date_key,
+	date,
+    DATE_ADD(date, INTERVAL 14 DAY) wk2_date,
+    DATE_ADD(date, INTERVAL 28 DAY) wk4_date,
+    DATE_ADD(date, INTERVAL 42 DAY) wk6_date
+FROM dim_date
+;

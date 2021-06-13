@@ -177,17 +177,3 @@ CREATE TABLE IF NOT EXISTS capitol_seige_arrests (
 		REFERENCES dim_county (county_key)
 );
 
-CREATE VIEW v_date_lag AS
-SELECT
-	date_key,
-	date,
-	CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 7 DAY), "%Y%m%d") AS UNSIGNED) AS lag_1wk_date_key,
-    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 14 DAY), "%Y%m%d") AS UNSIGNED) lag_2wk_date_key,
-    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 21 DAY), "%Y%m%d") AS UNSIGNED) lag_3wk_date_key,
-    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 28 DAY), "%Y%m%d") AS UNSIGNED) lag_4wk_date_key,
-    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 35 DAY), "%Y%m%d") AS UNSIGNED) lag_5wk_date_key,
-    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 42 DAY), "%Y%m%d") AS UNSIGNED) lag_6wk_date_key,
-    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 49 DAY), "%Y%m%d") AS UNSIGNED) lag_7wk_date_key,
-    CAST(DATE_FORMAT(DATE_ADD(date, INTERVAL 56 DAY), "%Y%m%d") AS UNSIGNED) lag_8wk_date_key
-FROM dim_date
-;
