@@ -51,7 +51,7 @@ createdb: clean
 		sql/census_hhp/staging-ddl.sql\
 		sql/census_demographics/staging-ddl.sql\
 		sql/jhu_covid19/staging-ddl.sql\
-		sql/acled/staging-ddl.sql\
+		sql/acled_ccc_events/staging-ddl.sql\
 		> build/makedb.sql;
 
 	# run SQL file
@@ -125,7 +125,7 @@ importcloudsql:
 		sql/census_hhp/staging-dml.sql\
 		sql/census_demographics/staging-dml.sql\
 		sql/jhu_covid19/staging-dml.sql\
-		sql/acled/staging-dml.sql\
+		sql/acled_ccc_events/staging-dml.sql\
 		> build/importcloud.sql;
 
 	mysql\
@@ -150,7 +150,7 @@ createdw: clean
 		sql/census_hhp/dw-ddl.sql\
 		sql/census_demographics/dw-ddl.sql\
 		sql/jhu_covid19/dw-ddl.sql\
-		sql/acled/dw-ddl.sql\
+		sql/acled_ccc_events/dw-ddl.sql\
 		> build/makedw.sql;
 
 	# run SQL file
@@ -176,7 +176,7 @@ loaddw: clean
 		sql/census_hhp/dw-dml.sql\
 		sql/census_demographics/dw-dml.sql\
 		sql/jhu_covid19/dw-dml.sql\
-		sql/acled/dw-dml.sql\
+		sql/acled_ccc_events/dw-dml.sql\
 		> build/etldw.sql;
 
 	# run SQL file
@@ -189,42 +189,3 @@ loaddw: clean
 
 	# cleanup
 	rm -rf build;
-
-add_acled:
-	# run SQL file
-	mysql\
-		--host="${MYSQL_HOST}"\
-		--user="${MYSQL_USER}"\
-		--password="${MYSQL_PASSWORD}"\
-		-D covid\
-		< sql/acled/staging-ddl.sql\
-
-	mysql\
-		--host="${MYSQL_HOST}"\
-		--user="${MYSQL_USER}"\
-		--password="${MYSQL_PASSWORD}"\
-		-D covid\
-		< sql/acled/staging-dml.sql
-
-	mysql\
-		--host="${MYSQL_HOST}"\
-		--user="${MYSQL_USER}"\
-		--password="${MYSQL_PASSWORD}"\
-		-D covid_dw\
-		< sql/acled/dw-ddl.sql
-
-	mysql\
-		--host="${MYSQL_HOST}"\
-		--user="${MYSQL_USER}"\
-		--password="${MYSQL_PASSWORD}"\
-		-D covid_dw\
-		< sql/acled/dw-dml.sql
-
-
-change2:
-	mysql\
-		--host="${MYSQL_HOST}"\
-		--user="${MYSQL_USER}"\
-		--password="${MYSQL_PASSWORD}"\
-		-D covid\
-		< tempsql.sql;
